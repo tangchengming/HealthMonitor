@@ -118,6 +118,7 @@
 			children = (
 				2BC32B7C1E8DFCBA00020BFE /* AppDelegate.h */,
 				2BC32B7D1E8DFCBA00020BFE /* AppDelegate.m */,
+				2BC92C381E8E5653003ACD60 /* Login */,
 				2BC32B7F1E8DFCBA00020BFE /* ViewController.h */,
 				2BC32B801E8DFCBA00020BFE /* ViewController.m */,
 				2BC32B821E8DFCBA00020BFE /* Main.storyboard */,
@@ -153,6 +154,37 @@
 				2BC32BA01E8DFCBA00020BFE /* Info.plist */,
 			);
 			path = HealthMonitorUITests;
+			sourceTree = "<group>";
+		};
+		2BC92C381E8E5653003ACD60 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2BC92C391E8E5653003ACD60 /* Controller */,
+				2BC92C3A1E8E5654003ACD60 /* Model */,
+				2BC92C3B1E8E5654003ACD60 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2BC92C391E8E5653003ACD60 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2BC92C3A1E8E5654003ACD60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BC92C3B1E8E5654003ACD60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C39875EA2363D09E976082AD /* Pods */ = {
@@ -591,6 +623,7 @@
 				2BC32BA51E8DFCBA00020BFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BC32BA61E8DFCBA00020BFE /* Build configuration list for PBXNativeTarget "HealthMonitorTests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +632,7 @@
 				2BC32BA81E8DFCBA00020BFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BC32BA91E8DFCBA00020BFE /* Build configuration list for PBXNativeTarget "HealthMonitorUITests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +641,7 @@
 				2BC32BAB1E8DFCBA00020BFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
