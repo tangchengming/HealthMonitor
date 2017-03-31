@@ -1,0 +1,10 @@
+target 'HealthMonitor'do
+
+pod 'AFNetworking'
+pod 'IQKeyboardManager'
+pod 'MBProgressHUD'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'Masonry'
+end
