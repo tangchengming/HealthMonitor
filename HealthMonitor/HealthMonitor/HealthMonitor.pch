@@ -1,0 +1,35 @@
+//
+//  HealthMonitor.pch
+//  HealthMonitor
+//
+//  Created by Atohuyo on 2017/4/5.
+//  Copyright © 2017年 Atohuyo. All rights reserved.
+//
+
+#ifndef HealthMonitor_pch
+#define HealthMonitor_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "Masonry.h"
+#import <MBProgressHUD.h>
+#import <IQKeyboardManager.h>
+#import "UIImageView+WebCache.h"
+
+
+//宏定义
+#import "UtilsDefine.h"
+#import "ColorDefine.h"
+#import "FieldDefine.h"
+#import "RequestDefine.h"
+#import "PathDefine.h"
+#import "SystemDefine.h"
+#import "FontDefine.h"
+#import "FrameDefine.h"
+#import "RequestManager.h"
+#import "ValidateHelper.h"
+#import "XHContext.h"
+#endif /* HealthMonitor_pch */

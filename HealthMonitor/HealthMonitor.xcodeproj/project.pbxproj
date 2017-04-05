@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B016D071E94CE350019736C /* NSData+CCCryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016CD91E94CE350019736C /* NSData+CCCryptUtil.m */; };
+		2B016D081E94CE350019736C /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016CDB1E94CE350019736C /* NSString+Hash.m */; };
+		2B016D091E94CE350019736C /* ValidateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016CDE1E94CE350019736C /* ValidateHelper.m */; };
+		2B016D181E94D1240019736C /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D171E94D1240019736C /* RequestManager.m */; };
+		2B016D1E1E94DD480019736C /* AOLinkedStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D1D1E94DD480019736C /* AOLinkedStoryboardSegue.m */; };
+		2B016D251E94E2420019736C /* CZUserDefalt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D201E94E2420019736C /* CZUserDefalt.m */; };
+		2B016D261E94E2420019736C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D221E94E2420019736C /* User.m */; };
+		2B016D271E94E2420019736C /* XHContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D241E94E2420019736C /* XHContext.m */; };
 		2BC32B7B1E8DFCBA00020BFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32B7A1E8DFCBA00020BFE /* main.m */; };
 		2BC32B7E1E8DFCBA00020BFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32B7D1E8DFCBA00020BFE /* AppDelegate.m */; };
 		2BC32B811E8DFCBA00020BFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC32B801E8DFCBA00020BFE /* ViewController.m */; };
@@ -37,6 +45,31 @@
 
 /* Begin PBXFileReference section */
 		24933361653136DE7157BAE4 /* Pods-HealthMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthMonitor/Pods-HealthMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		2B016CD81E94CE350019736C /* NSData+CCCryptUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CCCryptUtil.h"; sourceTree = "<group>"; };
+		2B016CD91E94CE350019736C /* NSData+CCCryptUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CCCryptUtil.m"; sourceTree = "<group>"; };
+		2B016CDA1E94CE350019736C /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		2B016CDB1E94CE350019736C /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		2B016CDD1E94CE350019736C /* ValidateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateHelper.h; sourceTree = "<group>"; };
+		2B016CDE1E94CE350019736C /* ValidateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateHelper.m; sourceTree = "<group>"; };
+		2B016CE11E94CE350019736C /* ColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorDefine.h; sourceTree = "<group>"; };
+		2B016CE21E94CE350019736C /* FontDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontDefine.h; sourceTree = "<group>"; };
+		2B016CE31E94CE350019736C /* FrameDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameDefine.h; sourceTree = "<group>"; };
+		2B016CE41E94CE350019736C /* PathDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathDefine.h; sourceTree = "<group>"; };
+		2B016CE51E94CE350019736C /* SystemDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDefine.h; sourceTree = "<group>"; };
+		2B016CE61E94CE350019736C /* UtilsDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsDefine.h; sourceTree = "<group>"; };
+		2B016CE81E94CE350019736C /* FieldDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldDefine.h; sourceTree = "<group>"; };
+		2B016CE91E94CE350019736C /* RequestDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDefine.h; sourceTree = "<group>"; };
+		2B016D161E94D1240019736C /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		2B016D171E94D1240019736C /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		2B016D1C1E94DD480019736C /* AOLinkedStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOLinkedStoryboardSegue.h; sourceTree = "<group>"; };
+		2B016D1D1E94DD480019736C /* AOLinkedStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOLinkedStoryboardSegue.m; sourceTree = "<group>"; };
+		2B016D1F1E94E2420019736C /* CZUserDefalt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZUserDefalt.h; sourceTree = "<group>"; };
+		2B016D201E94E2420019736C /* CZUserDefalt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZUserDefalt.m; sourceTree = "<group>"; };
+		2B016D211E94E2420019736C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2B016D221E94E2420019736C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2B016D231E94E2420019736C /* XHContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContext.h; sourceTree = "<group>"; };
+		2B016D241E94E2420019736C /* XHContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContext.m; sourceTree = "<group>"; };
+		2BA1196C1E947DCF0018827B /* HealthMonitor.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthMonitor.pch; sourceTree = "<group>"; };
 		2BC32B761E8DFCBA00020BFE /* HealthMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC32B7A1E8DFCBA00020BFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BC32B7C1E8DFCBA00020BFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +124,101 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2B016CD41E94BF4A0019736C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2B016CD61E94CE350019736C /* General */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2B016CD61E94CE350019736C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				2B016CD71E94CE350019736C /* Extension(分类) */,
+				2B016CDC1E94CE350019736C /* Helper(帮助) */,
+				2B016CDF1E94CE350019736C /* Macro(宏) */,
+				2B016CEB1E94CE350019736C /* Main(主要) */,
+				2B016CFE1E94CE350019736C /* NetService(网络) */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		2B016CD71E94CE350019736C /* Extension(分类) */ = {
+			isa = PBXGroup;
+			children = (
+				2B016D1C1E94DD480019736C /* AOLinkedStoryboardSegue.h */,
+				2B016D1D1E94DD480019736C /* AOLinkedStoryboardSegue.m */,
+				2B016CD81E94CE350019736C /* NSData+CCCryptUtil.h */,
+				2B016CD91E94CE350019736C /* NSData+CCCryptUtil.m */,
+				2B016CDA1E94CE350019736C /* NSString+Hash.h */,
+				2B016CDB1E94CE350019736C /* NSString+Hash.m */,
+			);
+			path = "Extension(分类)";
+			sourceTree = "<group>";
+		};
+		2B016CDC1E94CE350019736C /* Helper(帮助) */ = {
+			isa = PBXGroup;
+			children = (
+				2B016CDD1E94CE350019736C /* ValidateHelper.h */,
+				2B016CDE1E94CE350019736C /* ValidateHelper.m */,
+			);
+			path = "Helper(帮助)";
+			sourceTree = "<group>";
+		};
+		2B016CDF1E94CE350019736C /* Macro(宏) */ = {
+			isa = PBXGroup;
+			children = (
+				2B016CE01E94CE350019736C /* CommonDefine */,
+				2B016CE71E94CE350019736C /* ProjectDefine */,
+			);
+			path = "Macro(宏)";
+			sourceTree = "<group>";
+		};
+		2B016CE01E94CE350019736C /* CommonDefine */ = {
+			isa = PBXGroup;
+			children = (
+				2B016CE11E94CE350019736C /* ColorDefine.h */,
+				2B016CE21E94CE350019736C /* FontDefine.h */,
+				2B016CE31E94CE350019736C /* FrameDefine.h */,
+				2B016CE41E94CE350019736C /* PathDefine.h */,
+				2B016CE51E94CE350019736C /* SystemDefine.h */,
+				2B016CE61E94CE350019736C /* UtilsDefine.h */,
+			);
+			path = CommonDefine;
+			sourceTree = "<group>";
+		};
+		2B016CE71E94CE350019736C /* ProjectDefine */ = {
+			isa = PBXGroup;
+			children = (
+				2B016CE81E94CE350019736C /* FieldDefine.h */,
+				2B016CE91E94CE350019736C /* RequestDefine.h */,
+			);
+			path = ProjectDefine;
+			sourceTree = "<group>";
+		};
+		2B016CEB1E94CE350019736C /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		2B016CFE1E94CE350019736C /* NetService(网络) */ = {
+			isa = PBXGroup;
+			children = (
+				2B016D161E94D1240019736C /* RequestManager.h */,
+				2B016D171E94D1240019736C /* RequestManager.m */,
+				2B016D1F1E94E2420019736C /* CZUserDefalt.h */,
+				2B016D201E94E2420019736C /* CZUserDefalt.m */,
+				2B016D211E94E2420019736C /* User.h */,
+				2B016D221E94E2420019736C /* User.m */,
+				2B016D231E94E2420019736C /* XHContext.h */,
+				2B016D241E94E2420019736C /* XHContext.m */,
+			);
+			path = "NetService(网络)";
+			sourceTree = "<group>";
+		};
 		2BC32B6D1E8DFCBA00020BFE = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +246,7 @@
 			children = (
 				2BC32B7C1E8DFCBA00020BFE /* AppDelegate.h */,
 				2BC32B7D1E8DFCBA00020BFE /* AppDelegate.m */,
+				2B016CD41E94BF4A0019736C /* Common */,
 				2BC92C381E8E5653003ACD60 /* Login */,
 				2BC32B7F1E8DFCBA00020BFE /* ViewController.h */,
 				2BC32B801E8DFCBA00020BFE /* ViewController.m */,
@@ -126,6 +255,7 @@
 				2BC32B871E8DFCBA00020BFE /* LaunchScreen.storyboard */,
 				2BC32B8A1E8DFCBA00020BFE /* Info.plist */,
 				2BC32B791E8DFCBA00020BFE /* Supporting Files */,
+				2BA1196C1E947DCF0018827B /* HealthMonitor.pch */,
 			);
 			path = HealthMonitor;
 			sourceTree = "<group>";
@@ -383,9 +513,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B016D271E94E2420019736C /* XHContext.m in Sources */,
+				2B016D261E94E2420019736C /* User.m in Sources */,
+				2B016D251E94E2420019736C /* CZUserDefalt.m in Sources */,
 				2BC32B811E8DFCBA00020BFE /* ViewController.m in Sources */,
+				2B016D091E94CE350019736C /* ValidateHelper.m in Sources */,
 				2BC32B7E1E8DFCBA00020BFE /* AppDelegate.m in Sources */,
+				2B016D181E94D1240019736C /* RequestManager.m in Sources */,
 				2BC32B7B1E8DFCBA00020BFE /* main.m in Sources */,
+				2B016D1E1E94DD480019736C /* AOLinkedStoryboardSegue.m in Sources */,
+				2B016D081E94CE350019736C /* NSString+Hash.m in Sources */,
+				2B016D071E94CE350019736C /* NSData+CCCryptUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +608,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HealthMonitor/HealthMonitor.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -515,6 +655,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HealthMonitor/HealthMonitor.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -535,6 +677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XRJ957MSNJ;
 				INFOPLIST_FILE = HealthMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atohuyo.HealthMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -548,6 +691,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XRJ957MSNJ;
 				INFOPLIST_FILE = HealthMonitor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.atohuyo.HealthMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
