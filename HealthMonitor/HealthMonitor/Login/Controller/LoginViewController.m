@@ -9,6 +9,12 @@
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UIView *phoneView;
+@property (weak, nonatomic) IBOutlet UIView *passwordView;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextFiled;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextFiled;
+@property (weak, nonatomic) IBOutlet UIView *RegistView;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end
 
@@ -16,8 +22,80 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager];
+    keyboardManager.shouldResignOnTouchOutside = YES;
+    //关闭toolbar
+    keyboardManager.enableAutoToolbar = NO;
+    
+    //网络请求
+    [self setNetWorkData];
+    
+    //设置边框
+    [LayerCoreRadius setUpBorder:self.phoneView];
+    [LayerCoreRadius setUpBorder:self.passwordView];
+    [LayerCoreRadius setUpBorder:self.loginBtn];
+    
+   
 }
+
+
+
+
+- (IBAction)loginBtn:(UIButton *)sender {
+    
+    if ([self.phoneTextFiled.text isEqualToString: @""]  || [self.passwordTextFiled.text isEqualToString: @""]) {
+       
+        [MBProgressHUD showMessage:@"手机号或密码不能为空" toView:self.view afterDelty:1.0];
+        return;
+    }
+    if (![ ValidateHelper validateMobile1:self.phoneTextFiled.text]) {
+        
+        [MBProgressHUD showMessage:@"手机号或密码输入错误" toView:self.view afterDelty:1.0];
+        return;
+    }
+    if (![ValidateHelper validatePassword:self.passwordTextFiled.text]) {
+       
+        [MBProgressHUD showMessage:@"手机号或密码输入错误" toView:self.view afterDelty:1.0];
+        
+        return;
+    }
+    
+    
+}
+
+- (void) setNetWorkData {
+    
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    
+    param[@"userName"] = self.phoneTextFiled.text;
+    param[@"userPassword"] = self.passwordTextFiled.text;
+    
+   
+    
+    
+    [RequestManager httpRequestPOST:Request_Method_Login parameters:param success:^(id responseObject) {
+        
+        NSLog(@"数据：%@",responseObject);
+        if ([[responseObject objectForKey:@"flag"]integerValue]) {
+            
+            [MBProgressHUD showMessage:@"登录成功" toView:self.view afterDelty:1.0];
+
+        }else{
+            
+           
+            [MBProgressHUD showMessage:@"手机号或密码输入错误" toView:self.view afterDelty:1.0];
+
+            
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -32,4 +32,7 @@
 #import "RequestManager.h"
 #import "ValidateHelper.h"
 #import "XHContext.h"
+#import "LayerCoreRadius.h"
+#import "MBProgressHUD+MJ.h"
+#import "MBProgressHUD+GSProgressHUD.h"
 #endif /* HealthMonitor_pch */

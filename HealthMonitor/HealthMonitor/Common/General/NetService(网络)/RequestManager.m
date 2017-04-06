@@ -8,7 +8,7 @@
 
 #import "RequestManager.h"
 
-#define k_BaseUrl @"http://962527.com.cn/live/"
+
 
 @implementation RequestManager
 
@@ -18,7 +18,7 @@
     manager.requestSerializer.timeoutInterval = 5;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml", @"text/plain", nil];
     
-    string = [NSString stringWithFormat:@"%@%@",k_BaseUrl,string];
+    string = [NSString stringWithFormat:@"%@%@",K_IP,string];
    
     
     NSLog(@"链接：%@",string);
@@ -41,7 +41,7 @@
     manager.requestSerializer.timeoutInterval = 5;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml", @"text/plain", nil];
     
-    string = [NSString stringWithFormat:@"%@%@",k_BaseUrl,string];
+    string = [NSString stringWithFormat:@"%@%@",K_IP,string];
     
     NSLog(@"链接：%@",string);
     
