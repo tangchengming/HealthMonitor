@@ -20,7 +20,7 @@
     _idUser = [CZUserDefalt readDataWithKey:@"idUser"];
     _iconURL = [CZUserDefalt readDataWithKey:@"iconURL"];
     _nameUser = [CZUserDefalt readDataWithKey:@"nameUser"];
-    
+    _VerificationCode = [CZUserDefalt readDataWithKey:@"VerificationCode"];
     _phoneNumber = [CZUserDefalt readDataWithKey:@"phoneNumber"];
     
     _experienceUser = [CZUserDefalt readDataWithKey:@"experience"];

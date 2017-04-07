@@ -20,6 +20,6 @@
 @property (nonatomic, copy) NSString *lock;
 @property (nonatomic, copy) NSString *introduction;
 @property (nonatomic, copy) NSString *birthday;
-
+@property (nonatomic, copy) NSString *VerificationCode;
 
 @end

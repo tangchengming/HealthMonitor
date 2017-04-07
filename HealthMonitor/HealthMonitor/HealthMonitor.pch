@@ -32,6 +32,8 @@
 #import "RequestManager.h"
 #import "ValidateHelper.h"
 #import "XHContext.h"
+#import "CZUserDefalt.h"
+#import "User.h"
 #import "LayerCoreRadius.h"
 #import "MBProgressHUD+MJ.h"
 #import "MBProgressHUD+GSProgressHUD.h"

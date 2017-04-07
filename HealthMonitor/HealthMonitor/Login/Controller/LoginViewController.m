@@ -27,8 +27,7 @@
     //关闭toolbar
     keyboardManager.enableAutoToolbar = NO;
     
-    //网络请求
-    [self setNetWorkData];
+    
     
     //设置边框
     [LayerCoreRadius setUpBorder:self.phoneView];
@@ -60,7 +59,8 @@
         return;
     }
     
-    
+    //网络请求
+    [self setNetWorkData];
 }
 
 - (void) setNetWorkData {

@@ -16,6 +16,7 @@
 		2B016D261E94E2420019736C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D221E94E2420019736C /* User.m */; };
 		2B016D271E94E2420019736C /* XHContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D241E94E2420019736C /* XHContext.m */; };
 		2B016D2A1E94EA470019736C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D291E94EA470019736C /* LoginViewController.m */; };
+		2B6E33D91E978948007D9750 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E33D81E978948007D9750 /* HomeViewController.m */; };
 		2B78513C1E95DE53004874A9 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B78513B1E95DE53004874A9 /* RegistViewController.m */; };
 		2B9DF7031E95F123004E79FF /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF7021E95F123004E79FF /* ForgetViewController.m */; };
 		2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF7051E961F25004E79FF /* LayerCoreRadius.m */; };
@@ -77,6 +78,8 @@
 		2B016D241E94E2420019736C /* XHContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContext.m; sourceTree = "<group>"; };
 		2B016D281E94EA470019736C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2B016D291E94EA470019736C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2B6E33D71E978948007D9750 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2B6E33D81E978948007D9750 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		2B78513A1E95DE53004874A9 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		2B78513B1E95DE53004874A9 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		2B9DF7011E95F123004E79FF /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
@@ -243,6 +246,39 @@
 			path = "NetService(网络)";
 			sourceTree = "<group>";
 		};
+		2B6E33D31E978887007D9750 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E33D41E978887007D9750 /* Controller */,
+				2B6E33D51E978887007D9750 /* Model */,
+				2B6E33D61E978887007D9750 /* View */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		2B6E33D41E978887007D9750 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E33D71E978948007D9750 /* HomeViewController.h */,
+				2B6E33D81E978948007D9750 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6E33D51E978887007D9750 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6E33D61E978887007D9750 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2BC32B6D1E8DFCBA00020BFE = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +306,7 @@
 			children = (
 				2BC32B7C1E8DFCBA00020BFE /* AppDelegate.h */,
 				2BC32B7D1E8DFCBA00020BFE /* AppDelegate.m */,
+				2B6E33D31E978887007D9750 /* HomePage */,
 				2B016CD41E94BF4A0019736C /* Common */,
 				2BC92C381E8E5653003ACD60 /* Login */,
 				2BC32B821E8DFCBA00020BFE /* Main.storyboard */,
@@ -550,6 +587,7 @@
 				2B016D091E94CE350019736C /* ValidateHelper.m in Sources */,
 				2BC32B7E1E8DFCBA00020BFE /* AppDelegate.m in Sources */,
 				2B016D181E94D1240019736C /* RequestManager.m in Sources */,
+				2B6E33D91E978948007D9750 /* HomeViewController.m in Sources */,
 				2B9DF70C1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.m in Sources */,
 				2BC32B7B1E8DFCBA00020BFE /* main.m in Sources */,
 				2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */,

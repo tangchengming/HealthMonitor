@@ -24,21 +24,26 @@
 
 #define isTestHJ  1
 #if isTestHJ//1:测试环境  0：正式环境
-#define K_IP                    @"http://962527.com.cn/"//外网--测试环境
+#define K_IP                    @"http://962527.com.cn/live/"//外网--测试环境
 #define K_SERVICE       [NSString stringWithFormat:@"http://%@",K_IP]//
 #else
-#define K_IP                    @"http://962527.com.cn/"//正式测试环境
+#define K_IP                    @"http://962527.com.cn/live/"//正式测试环境
 #define K_SERVICE       [NSString stringWithFormat:@"http://%@",K_IP]//
 #endif
 
 
-#define Request_Method_Login                          @"live/login"//登录
-#define Request_Method_CancelLogin                    @"apipassport-logout.html"  //注销登录
-#define Request_Method_getsmscode                     @"apipassport-getsmscode.html"//获取验证码
-#define Request_Method_checkverify                    @"apipassport-checkverify.html"//验证验证码
-#define Request_Method_create                         @"apipassport-create.html"//注册apimember.html[GET]
+#define Request_Method_Login                          @"login"//登录  POST    params[@"userName"]   params[@"userPassword"]
+#define Request_Method_getsmscode                     @"sendMsg"//获取验证码  POST      params[@"tel"]
+#define Request_Method_checkverify                    @"checkTel"//验证手机号码是否被注册  POST   params[@"tel"]    params[@"codes"]
+#define Request_Method_create                         @"userReg"//注册 POST   params[@"tel"]  params[@"password"]  
+#define Request_Method_apimember                      @"appFindUserBytel"//会员信息   POST   param[@"tel"]
 
-#define Request_Method_apimember                      @"apimember.html"//会员信息
+
+
+
+
+#define Request_Method_CancelLogin                    @"apipassport-logout.html"  //注销登录
+
 
 
 #define Request_Method_BandLogosHtml                  @"apicommon-bandlogos.html"//首页品牌列表
