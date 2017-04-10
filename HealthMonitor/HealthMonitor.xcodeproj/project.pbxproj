@@ -18,6 +18,10 @@
 		2B016D2A1E94EA470019736C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D291E94EA470019736C /* LoginViewController.m */; };
 		2B6E33D91E978948007D9750 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E33D81E978948007D9750 /* HomeViewController.m */; };
 		2B78513C1E95DE53004874A9 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B78513B1E95DE53004874A9 /* RegistViewController.m */; };
+		2B9CEC121E9B666C00250304 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CEC111E9B666C00250304 /* UserViewController.m */; };
+		2B9CEC141E9B676400250304 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9CEC131E9B676400250304 /* User.storyboard */; };
+		2B9CEC181E9B6B2400250304 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CEC161E9B6B2400250304 /* UserTableViewCell.m */; };
+		2B9CEC191E9B6B2400250304 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9CEC171E9B6B2400250304 /* UserTableViewCell.xib */; };
 		2B9DF7031E95F123004E79FF /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF7021E95F123004E79FF /* ForgetViewController.m */; };
 		2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF7051E961F25004E79FF /* LayerCoreRadius.m */; };
 		2B9DF70C1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF70B1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.m */; };
@@ -82,6 +86,12 @@
 		2B6E33D81E978948007D9750 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		2B78513A1E95DE53004874A9 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		2B78513B1E95DE53004874A9 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		2B9CEC101E9B666B00250304 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		2B9CEC111E9B666C00250304 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		2B9CEC131E9B676400250304 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		2B9CEC151E9B6B2400250304 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		2B9CEC161E9B6B2400250304 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		2B9CEC171E9B6B2400250304 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		2B9DF7011E95F123004E79FF /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		2B9DF7021E95F123004E79FF /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		2B9DF7041E961F25004E79FF /* LayerCoreRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerCoreRadius.h; sourceTree = "<group>"; };
@@ -279,6 +289,50 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2B9CEC0B1E9B60EE00250304 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2B9CEC0C1E9B643800250304 /* UserManagement */ = {
+			isa = PBXGroup;
+			children = (
+				2B9CEC0D1E9B65F900250304 /* Controller */,
+				2B9CEC0E1E9B65F900250304 /* Model */,
+				2B9CEC0F1E9B65F900250304 /* View */,
+			);
+			path = UserManagement;
+			sourceTree = "<group>";
+		};
+		2B9CEC0D1E9B65F900250304 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B9CEC101E9B666B00250304 /* UserViewController.h */,
+				2B9CEC111E9B666C00250304 /* UserViewController.m */,
+				2B9CEC131E9B676400250304 /* User.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B9CEC0E1E9B65F900250304 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B9CEC0F1E9B65F900250304 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B9CEC151E9B6B2400250304 /* UserTableViewCell.h */,
+				2B9CEC161E9B6B2400250304 /* UserTableViewCell.m */,
+				2B9CEC171E9B6B2400250304 /* UserTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2BC32B6D1E8DFCBA00020BFE = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +360,8 @@
 			children = (
 				2BC32B7C1E8DFCBA00020BFE /* AppDelegate.h */,
 				2BC32B7D1E8DFCBA00020BFE /* AppDelegate.m */,
+				2B9CEC0C1E9B643800250304 /* UserManagement */,
+				2B9CEC0B1E9B60EE00250304 /* Storyboard */,
 				2B6E33D31E978887007D9750 /* HomePage */,
 				2B016CD41E94BF4A0019736C /* Common */,
 				2BC92C381E8E5653003ACD60 /* Login */,
@@ -504,8 +560,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC32B891E8DFCBA00020BFE /* LaunchScreen.storyboard in Resources */,
+				2B9CEC141E9B676400250304 /* User.storyboard in Resources */,
 				2B9DF7101E964502004E79FF /* MBProgressHUD.bundle in Resources */,
 				2BC32B861E8DFCBA00020BFE /* Assets.xcassets in Resources */,
+				2B9CEC191E9B6B2400250304 /* UserTableViewCell.xib in Resources */,
 				2BC32B841E8DFCBA00020BFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,9 +646,11 @@
 				2BC32B7E1E8DFCBA00020BFE /* AppDelegate.m in Sources */,
 				2B016D181E94D1240019736C /* RequestManager.m in Sources */,
 				2B6E33D91E978948007D9750 /* HomeViewController.m in Sources */,
+				2B9CEC121E9B666C00250304 /* UserViewController.m in Sources */,
 				2B9DF70C1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.m in Sources */,
 				2BC32B7B1E8DFCBA00020BFE /* main.m in Sources */,
 				2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */,
+				2B9CEC181E9B6B2400250304 /* UserTableViewCell.m in Sources */,
 				2B9DF7031E95F123004E79FF /* ForgetViewController.m in Sources */,
 				2B016D2A1E94EA470019736C /* LoginViewController.m in Sources */,
 				2B016D1E1E94DD480019736C /* AOLinkedStoryboardSegue.m in Sources */,
