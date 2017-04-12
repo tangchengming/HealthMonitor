@@ -31,6 +31,12 @@
 		2B64A4051E9CC7AD005E93BD /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64A4031E9CC7AD005E93BD /* ListTableViewCell.xib */; };
 		2B64A40B1E9CD236005E93BD /* ECG.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B64A40A1E9CD236005E93BD /* ECG.storyboard */; };
 		2B64A40F1E9CD5EC005E93BD /* ECGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64A40D1E9CD5EC005E93BD /* ECGTableViewCell.m */; };
+		2B6FA4921E9DD70B0035281D /* ECGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4911E9DD70B0035281D /* ECGViewController.m */; };
+		2B6FA4951E9DD77D0035281D /* ECG_DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4941E9DD77D0035281D /* ECG_DetailsViewController.m */; };
+		2B6FA4AB1E9E04A90035281D /* BGM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6FA4AA1E9E04A90035281D /* BGM.storyboard */; };
+		2B6FA4AE1E9E0CE80035281D /* BGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4AD1E9E0CE80035281D /* BGMViewController.m */; };
+		2B6FA4B21E9E300F0035281D /* PublicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4B11E9E300F0035281D /* PublicView.m */; };
+		2B6FA4B41E9E30350035281D /* PublicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6FA4B31E9E30350035281D /* PublicView.xib */; };
 		2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF7051E961F25004E79FF /* LayerCoreRadius.m */; };
 		2B9DF70C1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF70B1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.m */; };
 		2B9DF7101E964502004E79FF /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B9DF70D1E964502004E79FF /* MBProgressHUD.bundle */; };
@@ -114,6 +120,16 @@
 		2B64A40A1E9CD236005E93BD /* ECG.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ECG.storyboard; sourceTree = "<group>"; };
 		2B64A40C1E9CD5EC005E93BD /* ECGTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGTableViewCell.h; sourceTree = "<group>"; };
 		2B64A40D1E9CD5EC005E93BD /* ECGTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGTableViewCell.m; sourceTree = "<group>"; };
+		2B6FA4901E9DD70B0035281D /* ECGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGViewController.h; sourceTree = "<group>"; };
+		2B6FA4911E9DD70B0035281D /* ECGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGViewController.m; sourceTree = "<group>"; };
+		2B6FA4931E9DD77D0035281D /* ECG_DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECG_DetailsViewController.h; sourceTree = "<group>"; };
+		2B6FA4941E9DD77D0035281D /* ECG_DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECG_DetailsViewController.m; sourceTree = "<group>"; };
+		2B6FA4AA1E9E04A90035281D /* BGM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BGM.storyboard; sourceTree = "<group>"; };
+		2B6FA4AC1E9E0CE80035281D /* BGMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMViewController.h; sourceTree = "<group>"; };
+		2B6FA4AD1E9E0CE80035281D /* BGMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMViewController.m; sourceTree = "<group>"; };
+		2B6FA4B01E9E300F0035281D /* PublicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicView.h; sourceTree = "<group>"; };
+		2B6FA4B11E9E300F0035281D /* PublicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicView.m; sourceTree = "<group>"; };
+		2B6FA4B31E9E30350035281D /* PublicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicView.xib; sourceTree = "<group>"; };
 		2B9DF7041E961F25004E79FF /* LayerCoreRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerCoreRadius.h; sourceTree = "<group>"; };
 		2B9DF7051E961F25004E79FF /* LayerCoreRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerCoreRadius.m; sourceTree = "<group>"; };
 		2B9DF70A1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+GSProgressHUD.h"; sourceTree = "<group>"; };
@@ -279,10 +295,16 @@
 		2B64A3B81E9C7F6D005E93BD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2B64A4061E9CD1CE005E93BD /* ECG */,
+				2B6FA4AF1E9E2F8B0035281D /* PublicListView */,
 				2B64A3BF1E9C7F6D005E93BD /* Login */,
 				2B64A3B91E9C7F6D005E93BD /* HomePage */,
 				2B64A3CE1E9C7F6D005E93BD /* UserManagement */,
+				2B6FA4A61E9E042A0035281D /* PulseMeter */,
+				2B6FA4A21E9E041C0035281D /* FatScale */,
+				2B6FA49E1E9E040D0035281D /* EarThermometer */,
+				2B6FA49A1E9E02F20035281D /* Sphygmomanometer */,
+				2B6FA4961E9E02840035281D /* BloodGlucoseMeter */,
+				2B64A4061E9CD1CE005E93BD /* ECG */,
 				2B64A3F61E9CAB9E005E93BD /* FatMonitor */,
 				2B64A3ED1E9C841D005E93BD /* AlkBloodGlucoseMeter */,
 				2B64A3C91E9C7F6D005E93BD /* Storyboard */,
@@ -521,6 +543,10 @@
 		2B64A4071E9CD1CE005E93BD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B6FA4901E9DD70B0035281D /* ECGViewController.h */,
+				2B6FA4911E9DD70B0035281D /* ECGViewController.m */,
+				2B6FA4931E9DD77D0035281D /* ECG_DetailsViewController.h */,
+				2B6FA4941E9DD77D0035281D /* ECG_DetailsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -539,6 +565,174 @@
 				2B64A40D1E9CD5EC005E93BD /* ECGTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2B6FA4961E9E02840035281D /* BloodGlucoseMeter */ = {
+			isa = PBXGroup;
+			children = (
+				2B6FA4971E9E02840035281D /* Controller */,
+				2B6FA4981E9E02840035281D /* Model */,
+				2B6FA4991E9E02840035281D /* View */,
+				2B6FA4AA1E9E04A90035281D /* BGM.storyboard */,
+			);
+			path = BloodGlucoseMeter;
+			sourceTree = "<group>";
+		};
+		2B6FA4971E9E02840035281D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B6FA4AC1E9E0CE80035281D /* BGMViewController.h */,
+				2B6FA4AD1E9E0CE80035281D /* BGMViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6FA4981E9E02840035281D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6FA4991E9E02840035281D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6FA49A1E9E02F20035281D /* Sphygmomanometer */ = {
+			isa = PBXGroup;
+			children = (
+				2B6FA49B1E9E02F20035281D /* Controller */,
+				2B6FA49C1E9E02F20035281D /* Model */,
+				2B6FA49D1E9E02F20035281D /* View */,
+			);
+			path = Sphygmomanometer;
+			sourceTree = "<group>";
+		};
+		2B6FA49B1E9E02F20035281D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6FA49C1E9E02F20035281D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6FA49D1E9E02F20035281D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6FA49E1E9E040D0035281D /* EarThermometer */ = {
+			isa = PBXGroup;
+			children = (
+				2B6FA49F1E9E040D0035281D /* Controller */,
+				2B6FA4A01E9E040D0035281D /* Model */,
+				2B6FA4A11E9E040D0035281D /* View */,
+			);
+			path = EarThermometer;
+			sourceTree = "<group>";
+		};
+		2B6FA49F1E9E040D0035281D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6FA4A01E9E040D0035281D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6FA4A11E9E040D0035281D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6FA4A21E9E041C0035281D /* FatScale */ = {
+			isa = PBXGroup;
+			children = (
+				2B6FA4A31E9E041C0035281D /* Controller */,
+				2B6FA4A41E9E041C0035281D /* Model */,
+				2B6FA4A51E9E041C0035281D /* View */,
+			);
+			path = FatScale;
+			sourceTree = "<group>";
+		};
+		2B6FA4A31E9E041C0035281D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6FA4A41E9E041C0035281D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6FA4A51E9E041C0035281D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6FA4A61E9E042A0035281D /* PulseMeter */ = {
+			isa = PBXGroup;
+			children = (
+				2B6FA4A71E9E042A0035281D /* Controller */,
+				2B6FA4A81E9E042A0035281D /* Model */,
+				2B6FA4A91E9E042A0035281D /* View */,
+			);
+			path = PulseMeter;
+			sourceTree = "<group>";
+		};
+		2B6FA4A71E9E042A0035281D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6FA4A81E9E042A0035281D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6FA4A91E9E042A0035281D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6FA4AF1E9E2F8B0035281D /* PublicListView */ = {
+			isa = PBXGroup;
+			children = (
+				2B6FA4B01E9E300F0035281D /* PublicView.h */,
+				2B6FA4B11E9E300F0035281D /* PublicView.m */,
+				2B6FA4B31E9E30350035281D /* PublicView.xib */,
+			);
+			path = PublicListView;
 			sourceTree = "<group>";
 		};
 		2BC32B6D1E8DFCBA00020BFE = {
@@ -732,9 +926,11 @@
 				2B64A40B1E9CD236005E93BD /* ECG.storyboard in Resources */,
 				2B64A3DC1E9C7F6D005E93BD /* User.storyboard in Resources */,
 				2B9DF7101E964502004E79FF /* MBProgressHUD.bundle in Resources */,
+				2B6FA4B41E9E30350035281D /* PublicView.xib in Resources */,
 				2B64A4051E9CC7AD005E93BD /* ListTableViewCell.xib in Resources */,
 				2BC32B861E8DFCBA00020BFE /* Assets.xcassets in Resources */,
 				2B64A3F21E9C849C005E93BD /* Alk.storyboard in Resources */,
+				2B6FA4AB1E9E04A90035281D /* BGM.storyboard in Resources */,
 				2B64A3DF1E9C7F6D005E93BD /* UserTableViewCell.xib in Resources */,
 				2BC32B841E8DFCBA00020BFE /* Main.storyboard in Resources */,
 			);
@@ -812,6 +1008,7 @@
 				2B64A40F1E9CD5EC005E93BD /* ECGTableViewCell.m in Sources */,
 				2B016D271E94E2420019736C /* XHContext.m in Sources */,
 				2B64A4041E9CC7AD005E93BD /* ListTableViewCell.m in Sources */,
+				2B6FA4AE1E9E0CE80035281D /* BGMViewController.m in Sources */,
 				2B64A3D91E9C7F6D005E93BD /* ForgetViewController.m in Sources */,
 				2B016D261E94E2420019736C /* User.m in Sources */,
 				2B016D251E94E2420019736C /* CZUserDefalt.m in Sources */,
@@ -828,9 +1025,12 @@
 				2B64A3DE1E9C7F6D005E93BD /* UserTableViewCell.m in Sources */,
 				2B64A3EC1E9C80E1005E93BD /* NewUserViewController.m in Sources */,
 				2BC32B7B1E8DFCBA00020BFE /* main.m in Sources */,
+				2B6FA4B21E9E300F0035281D /* PublicView.m in Sources */,
 				2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */,
+				2B6FA4921E9DD70B0035281D /* ECGViewController.m in Sources */,
 				2B016D1E1E94DD480019736C /* AOLinkedStoryboardSegue.m in Sources */,
 				2B016D081E94CE350019736C /* NSString+Hash.m in Sources */,
+				2B6FA4951E9DD77D0035281D /* ECG_DetailsViewController.m in Sources */,
 				2B016D071E94CE350019736C /* NSData+CCCryptUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
