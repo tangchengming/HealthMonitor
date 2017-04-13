@@ -29,6 +29,9 @@
                 <constraint firstItem="typ-yC-WxE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="QS8-tl-84n"/>
                 <constraint firstAttribute="bottom" secondItem="typ-yC-WxE" secondAttribute="bottom" id="TSE-id-Ru2"/>
             </constraints>
+            <connections>
+                <outlet property="userTableview" destination="typ-yC-WxE" id="NeU-UQ-gYp"/>
+            </connections>
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>
     </objects>

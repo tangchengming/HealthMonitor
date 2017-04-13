@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PublicView : UIView
+@property (weak, nonatomic) IBOutlet UITableView *userTableview;
 
 @end

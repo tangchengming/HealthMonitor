@@ -37,6 +37,9 @@
 		2B6FA4AE1E9E0CE80035281D /* BGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4AD1E9E0CE80035281D /* BGMViewController.m */; };
 		2B6FA4B21E9E300F0035281D /* PublicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4B11E9E300F0035281D /* PublicView.m */; };
 		2B6FA4B41E9E30350035281D /* PublicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6FA4B31E9E30350035281D /* PublicView.xib */; };
+		2B7B119D1E9F266800951E37 /* BPM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B119C1E9F266800951E37 /* BPM.storyboard */; };
+		2B7B11A01E9F4C7200951E37 /* MeasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */; };
+		2B7B11A31E9F4CAE00951E37 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B11A21E9F4CAE00951E37 /* StatisticsViewController.m */; };
 		2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF7051E961F25004E79FF /* LayerCoreRadius.m */; };
 		2B9DF70C1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9DF70B1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.m */; };
 		2B9DF7101E964502004E79FF /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B9DF70D1E964502004E79FF /* MBProgressHUD.bundle */; };
@@ -130,6 +133,11 @@
 		2B6FA4B01E9E300F0035281D /* PublicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicView.h; sourceTree = "<group>"; };
 		2B6FA4B11E9E300F0035281D /* PublicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicView.m; sourceTree = "<group>"; };
 		2B6FA4B31E9E30350035281D /* PublicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicView.xib; sourceTree = "<group>"; };
+		2B7B119C1E9F266800951E37 /* BPM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BPM.storyboard; sourceTree = "<group>"; };
+		2B7B119E1E9F4C7200951E37 /* MeasureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureViewController.h; sourceTree = "<group>"; };
+		2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureViewController.m; sourceTree = "<group>"; };
+		2B7B11A11E9F4CAE00951E37 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		2B7B11A21E9F4CAE00951E37 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		2B9DF7041E961F25004E79FF /* LayerCoreRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerCoreRadius.h; sourceTree = "<group>"; };
 		2B9DF7051E961F25004E79FF /* LayerCoreRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerCoreRadius.m; sourceTree = "<group>"; };
 		2B9DF70A1E9630C1004E79FF /* MBProgressHUD+GSProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+GSProgressHUD.h"; sourceTree = "<group>"; };
@@ -607,6 +615,7 @@
 				2B6FA49B1E9E02F20035281D /* Controller */,
 				2B6FA49C1E9E02F20035281D /* Model */,
 				2B6FA49D1E9E02F20035281D /* View */,
+				2B7B119C1E9F266800951E37 /* BPM.storyboard */,
 			);
 			path = Sphygmomanometer;
 			sourceTree = "<group>";
@@ -614,6 +623,10 @@
 		2B6FA49B1E9E02F20035281D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B7B119E1E9F4C7200951E37 /* MeasureViewController.h */,
+				2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */,
+				2B7B11A11E9F4CAE00951E37 /* StatisticsViewController.h */,
+				2B7B11A21E9F4CAE00951E37 /* StatisticsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -932,6 +945,7 @@
 				2B64A3F21E9C849C005E93BD /* Alk.storyboard in Resources */,
 				2B6FA4AB1E9E04A90035281D /* BGM.storyboard in Resources */,
 				2B64A3DF1E9C7F6D005E93BD /* UserTableViewCell.xib in Resources */,
+				2B7B119D1E9F266800951E37 /* BPM.storyboard in Resources */,
 				2BC32B841E8DFCBA00020BFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1012,6 +1026,7 @@
 				2B64A3D91E9C7F6D005E93BD /* ForgetViewController.m in Sources */,
 				2B016D261E94E2420019736C /* User.m in Sources */,
 				2B016D251E94E2420019736C /* CZUserDefalt.m in Sources */,
+				2B7B11A01E9F4C7200951E37 /* MeasureViewController.m in Sources */,
 				2B9DF7111E964502004E79FF /* MBProgressHUD+MJ.m in Sources */,
 				2B016D091E94CE350019736C /* ValidateHelper.m in Sources */,
 				2B64A3DB1E9C7F6D005E93BD /* RegistViewController.m in Sources */,
@@ -1026,6 +1041,7 @@
 				2B64A3EC1E9C80E1005E93BD /* NewUserViewController.m in Sources */,
 				2BC32B7B1E8DFCBA00020BFE /* main.m in Sources */,
 				2B6FA4B21E9E300F0035281D /* PublicView.m in Sources */,
+				2B7B11A31E9F4CAE00951E37 /* StatisticsViewController.m in Sources */,
 				2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */,
 				2B6FA4921E9DD70B0035281D /* ECGViewController.m in Sources */,
 				2B016D1E1E94DD480019736C /* AOLinkedStoryboardSegue.m in Sources */,
