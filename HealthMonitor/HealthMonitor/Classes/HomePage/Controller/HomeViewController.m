@@ -19,6 +19,45 @@
     // Do any additional setup after loading the view.
 }
 
+//跳转用户管理
+- (IBAction)UserBtn:(UIButton *)sender {
+}
+//跳转耳温计
+- (IBAction)EarBtn:(UIButton *)sender {
+}
+
+//跳转脂肪称
+- (IBAction)FatScaleBtn:(UIButton *)sender {
+}
+
+//跳转血压计
+- (IBAction)SphyBtn:(UIButton *)sender {
+}
+
+//跳转血糖仪
+- (IBAction)BloodBtn:(UIButton *)sender {
+}
+
+//跳转脉搏仪
+- (IBAction)pulseBtn:(UIButton *)sender {
+}
+
+//跳转爱立康
+- (IBAction)ALKbtn:(UIButton *)sender {
+}
+
+//跳转脂肪仪
+- (IBAction)FatBtn:(UIButton *)sender {
+}
+
+//跳转心电监测
+- (IBAction)ECGBtn:(UIButton *)sender {
+}
+
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
