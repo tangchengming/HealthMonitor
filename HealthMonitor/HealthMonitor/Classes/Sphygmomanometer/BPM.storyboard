@@ -15,7 +15,7 @@
         <!--Measure View Controller-->
         <scene sceneID="cRt-tB-yfX">
             <objects>
-                <viewController id="lFO-Pk-FQw" customClass="MeasureViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BPMVC" id="lFO-Pk-FQw" customClass="MeasureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ibD-jn-tCP"/>
                         <viewControllerLayoutGuide type="bottom" id="DVC-dS-IR7"/>

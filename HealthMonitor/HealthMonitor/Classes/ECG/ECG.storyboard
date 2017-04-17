@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="Tm2-H8-KfZ">
             <objects>
-                <viewController id="GCW-d4-E5I" customClass="ECGViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ECGVC" id="GCW-d4-E5I" customClass="ECGViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="URe-1E-gFC"/>
                         <viewControllerLayoutGuide type="bottom" id="tG0-vM-JAr"/>
@@ -254,6 +254,9 @@
                                             <constraint firstAttribute="width" constant="30" id="hpY-Dv-yYi"/>
                                         </constraints>
                                         <state key="normal" image="back_arrow"/>
+                                        <connections>
+                                            <segue destination="GCW-d4-E5I" kind="show" id="sCL-Jc-7E9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

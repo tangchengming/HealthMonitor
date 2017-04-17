@@ -9,6 +9,20 @@
 #import "NewUserViewController.h"
 
 @interface NewUserViewController ()
+@property (weak, nonatomic) IBOutlet UIView *NameView;
+@property (weak, nonatomic) IBOutlet UITextField *NameTextField;
+
+@property (weak, nonatomic) IBOutlet UIView *SexView;
+@property (weak, nonatomic) IBOutlet UILabel *SexLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *AgeView;
+@property (weak, nonatomic) IBOutlet UILabel *AgeLabel;
+
+
+@property (weak, nonatomic) IBOutlet UIView *cardView;
+@property (weak, nonatomic) IBOutlet UITextField *cardTextField;
+
+@property (weak, nonatomic) IBOutlet UIButton *SaveBtn;
 
 @end
 
@@ -18,6 +32,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+
+- (IBAction)SaveButton:(UIButton *)sender {
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -37,8 +37,8 @@
 #define Request_Method_checkverify                    @"checkTel"//验证手机号码是否被注册  POST   params[@"tel"]    params[@"codes"]
 #define Request_Method_create                         @"userReg"//注册 POST   params[@"tel"]  params[@"password"]  
 #define Request_Method_apimember                      @"appFindUserBytel"//会员信息   POST   param[@"tel"]
-
-
+#define Request_Method_UserList                      @"memberlist/findMyMemberlistByUserId"//用户列表  POST   param[@"userId"]
+#define Request_Method_NewUser                      @"memberlist/addMemberlist"//用户列表  POST
 
 
 

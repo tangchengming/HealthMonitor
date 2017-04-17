@@ -13,7 +13,7 @@
         <!--AlkBGM View Controller-->
         <scene sceneID="Zhj-Xp-7jW">
             <objects>
-                <viewController id="TP4-jr-x6m" customClass="AlkBGMViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlkVC" id="TP4-jr-x6m" customClass="AlkBGMViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9te-gF-cbv"/>
                         <viewControllerLayoutGuide type="bottom" id="m4I-zB-pGm"/>

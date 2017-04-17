@@ -15,7 +15,7 @@
         <!--Ear Measure View Controller-->
         <scene sceneID="lNI-67-kRf">
             <objects>
-                <viewController id="YxE-zg-DiQ" customClass="EarMeasureViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EarVC" id="YxE-zg-DiQ" customClass="EarMeasureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cF1-LS-EGg"/>
                         <viewControllerLayoutGuide type="bottom" id="IOb-pZ-cEA"/>

@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="agK-vB-eV8">
             <objects>
-                <viewController id="WVX-h2-hMY" customClass="BGMViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BGMVC" id="WVX-h2-hMY" customClass="BGMViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FLA-Xr-v6f"/>
                         <viewControllerLayoutGuide type="bottom" id="9ss-OG-vyL"/>
@@ -125,21 +125,19 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAK-vl-ZgS">
                                         <rect key="frame" x="50" y="101" width="50" height="33"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="V95-qW-vB7"/>
                                         </constraints>
-                                        <state key="normal" title="周">
+                                        <state key="normal" title="周" backgroundImage="time_d">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylM-4P-sOA">
                                         <rect key="frame" x="275" y="101" width="50" height="33"/>
-                                        <color key="backgroundColor" red="0.35560742020000002" green="0.81530803439999999" blue="0.86326771970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="b67-0X-qeS"/>
                                         </constraints>
-                                        <state key="normal" title="月">
+                                        <state key="normal" title="月" backgroundImage="time_no">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -207,6 +205,8 @@
     <resources>
         <image name="back_arrow" width="10" height="19"/>
         <image name="bar" width="720" height="96"/>
+        <image name="time_d" width="100" height="61"/>
+        <image name="time_no" width="100" height="61"/>
         <image name="user_fat" width="48" height="48"/>
     </resources>
 </document>

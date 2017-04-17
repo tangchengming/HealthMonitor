@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UserTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *HeadImageView;
+
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *AgeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *SexImageView;

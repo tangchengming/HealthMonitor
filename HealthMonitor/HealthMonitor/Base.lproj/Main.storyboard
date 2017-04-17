@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mUX-jp-Ikg">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -85,14 +85,14 @@
                                 <rect key="frame" x="30" y="303.5" width="260" height="38"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lock" translatesAutoresizingMaskIntoConstraints="NO" id="9X9-a9-ug9">
-                                        <rect key="frame" x="10" y="8" width="17" height="20"/>
+                                        <rect key="frame" x="10" y="8.5" width="17" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="PB1-1S-9nj"/>
                                             <constraint firstAttribute="width" constant="17" id="wDc-u9-bzW"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D77-EF-cT8">
-                                        <rect key="frame" x="37" y="3" width="223" height="30"/>
+                                        <rect key="frame" x="37" y="3.5" width="223" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="lhE-N1-ibl"/>
                                         </constraints>
@@ -309,14 +309,14 @@
                                 <rect key="frame" x="30" y="162.5" width="260" height="38"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_lock" translatesAutoresizingMaskIntoConstraints="NO" id="1ZN-KQ-JWV">
-                                        <rect key="frame" x="10" y="8" width="17" height="20"/>
+                                        <rect key="frame" x="10" y="8.5" width="17" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="1lb-yG-0vc"/>
                                             <constraint firstAttribute="width" constant="17" id="kcN-Vj-Fuc"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入6-20位新密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6LK-Ac-vSD">
-                                        <rect key="frame" x="37" y="3" width="223" height="30"/>
+                                        <rect key="frame" x="37" y="3.5" width="223" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="wLt-qZ-deT"/>
                                         </constraints>
@@ -497,7 +497,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_key" translatesAutoresizingMaskIntoConstraints="NO" id="IP1-yJ-zW9">
-                                        <rect key="frame" x="10" y="8" width="17" height="20"/>
+                                        <rect key="frame" x="10" y="8.5" width="17" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="17" id="AWX-Sa-DLu"/>
                                             <constraint firstAttribute="height" constant="20" id="pcP-FA-Aak"/>

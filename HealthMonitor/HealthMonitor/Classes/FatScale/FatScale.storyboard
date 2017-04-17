@@ -14,7 +14,7 @@
         <!--Weigh View Controller-->
         <scene sceneID="OXe-fK-kO2">
             <objects>
-                <viewController id="HgM-Zg-k4P" customClass="WeighViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FatScaleVC" id="HgM-Zg-k4P" customClass="WeighViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mNr-eS-vnJ"/>
                         <viewControllerLayoutGuide type="bottom" id="ZmS-W3-6Es"/>
@@ -79,6 +79,9 @@
                                             <constraint firstAttribute="height" constant="30" id="Zd5-AW-Gfz"/>
                                         </constraints>
                                         <state key="normal" image="scale_fat"/>
+                                        <connections>
+                                            <segue destination="Z3h-mo-hhW" kind="show" id="PwO-63-Fdi"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成员名称" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djx-YQ-oZx">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
