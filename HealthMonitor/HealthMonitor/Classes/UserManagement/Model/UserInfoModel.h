@@ -58,7 +58,7 @@
 @property (nonatomic, copy) NSString   *name;
 
 /** 性别 */
-@property (nonatomic, strong)NSNumber *sex;
+@property (nonatomic, assign)int sex;
 
 
 

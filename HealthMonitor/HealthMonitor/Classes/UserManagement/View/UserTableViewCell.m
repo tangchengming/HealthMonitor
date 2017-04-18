@@ -2,7 +2,7 @@
 //  UserTableViewCell.m
 //  HealthMonitor
 //
-//  Created by Atohuyo on 2017/4/10.
+//  Created by Atohuyo on 2017/4/18.
 //  Copyright © 2017年 Atohuyo. All rights reserved.
 //
 
@@ -20,11 +20,5 @@
 
     // Configure the view for the selected state
 }
-
-//修改信息
-- (IBAction)modifyBtn:(UIButton *)sender {
-}
-
-
 
 @end

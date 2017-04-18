@@ -24,7 +24,7 @@
 
 #define isTestHJ  1
 #if isTestHJ//1:测试环境  0：正式环境
-#define K_IP                    @"http://962527.com.cn/live/"//外网--测试环境
+#define K_IP                    @"http://192.168.0.138:8080/"//外网--测试环境
 #define K_SERVICE       [NSString stringWithFormat:@"http://%@",K_IP]//
 #else
 #define K_IP                    @"http://962527.com.cn/live/"//正式测试环境
@@ -32,13 +32,21 @@
 #endif
 
 
-#define Request_Method_Login                          @"login"//登录  POST    params[@"userName"]   params[@"userPassword"]
-#define Request_Method_getsmscode                     @"sendMsg"//获取验证码  POST      params[@"tel"]
-#define Request_Method_checkverify                    @"checkTel"//验证手机号码是否被注册  POST   params[@"tel"]    params[@"codes"]
-#define Request_Method_create                         @"userReg"//注册 POST   params[@"tel"]  params[@"password"]  
-#define Request_Method_apimember                      @"appFindUserBytel"//会员信息   POST   param[@"tel"]
-#define Request_Method_UserList                      @"memberlist/findMyMemberlistByUserId"//用户列表  POST   param[@"userId"]
-#define Request_Method_NewUser                      @"memberlist/addMemberlist"//用户列表  POST
+#define Request_Method_Login                         @"live/login"//登录  POST    params[@"userName"]   params[@"userPassword"]
+#define Request_Method_getsmscode                    @"live/sendMsg"//获取验证码  POST      params[@"tel"]
+#define Request_Method_checkverify                   @"live/checkTel"//验证手机号码是否被注册  POST   params[@"tel"]    params[@"codes"]
+#define Request_Method_create                        @"live/userReg"//注册 POST   params[@"tel"]  params[@"password"]
+#define Request_Method_apimember                     @"live/appFindUserBytel"//会员信息   POST   param[@"tel"]
+#define Request_Method_UserList                      @"live/memberlist/findMyMemberlistByUserId"//用户列表  POST   param[@"userId"]
+#define Request_Method_NewUser                       @"live/memberlist/addMemberlist"//新建用户  POST
+#define Request_Method_deleteUser                    @"live/memberlist/deleteMemberlistByMemberId"//删除用户  POST
+#define Request_Method_card                          @"health/bindUser/bindUserApp"//绑定卡号  POST
+#define Request_Method_EditUser                      @"live/memberlist/updateMemberlist"//修改用户  POST
+
+
+
+
+
 
 
 

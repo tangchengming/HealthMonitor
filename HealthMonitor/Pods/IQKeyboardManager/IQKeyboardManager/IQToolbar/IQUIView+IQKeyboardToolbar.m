@@ -351,7 +351,8 @@
     [items addObject:[[self class] flexibleBarButtonItem]];
     
     //Done button
-    IQBarButtonItem *doneButton = [[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:action];
+    //IQBarButtonItem *doneButton = [[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:action];
+    IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:target action:action];
     [items addObject:doneButton];
     
     //  Adding button to toolBar.
@@ -471,7 +472,9 @@
     [items addObject:[[self class] flexibleBarButtonItem]];
     
     //Done button
-    IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:doneAction];
+    //IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:doneAction];
+    
+    IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:target action:doneAction];
     [items addObject:doneButton];
     
     //  Adding button to toolBar.
@@ -579,7 +582,8 @@
     [items addObject:[[self class] flexibleBarButtonItem]];
     
     //Done button
-    IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:doneAction];
+    //IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:doneAction];
+    IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:target action:doneAction];
 	[items addObject:doneButton];
 	
     //  Adding button to toolBar.
