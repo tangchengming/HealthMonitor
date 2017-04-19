@@ -25,9 +25,10 @@
 #define isTestHJ  1
 #if isTestHJ//1:测试环境  0：正式环境
 #define K_IP                    @"http://192.168.0.138:8080/"//外网--测试环境
+#define B_IP                    @"http://localhost:8080/"//外网--测试环境
 #define K_SERVICE       [NSString stringWithFormat:@"http://%@",K_IP]//
 #else
-#define K_IP                    @"http://962527.com.cn/live/"//正式测试环境
+#define K_IP                    @"http://962527.com.cn/"//正式测试环境
 #define K_SERVICE       [NSString stringWithFormat:@"http://%@",K_IP]//
 #endif
 
@@ -44,6 +45,33 @@
 #define Request_Method_EditUser                      @"live/memberlist/updateMemberlist"//修改用户  POST
 
 
+#define Request_Method_Blood_pressure                @"health/app/queryBlood_pressureApp"    //血压数据
+
+#define Request_Method_BloodFat                      @"health/app/queryBloodFatApp"    //血脂数据
+
+#define Request_Method_BloodSugar                    @"health/app/queryBloodSugarApp"    //血糖数据
+
+#define Request_Method_Ecg_lattice                   @"health/app/queryEcg_latticeApp"    //心电数据生成的点阵数据
+
+#define Request_Method_Ecg_picture                   @"health/app/queryEcg_pictureApp"    //心电文件经过分析得到的图片数据
+
+#define Request_Method_Ecg_structure                 @"health/app/queryEcg_structureApp"    //心电文件经过解析得到的结构体数据
+
+#define Request_Method_Ecg                           @"health/app/queryEcgApp"    //心电文件数据
+
+#define Request_Method_Fat                           @"health/app/queryFatApp"    //脂肪数据
+
+#define Request_Method_Gateway                       @"health/app/queryGatewayApp"   // 网关透传数据
+
+#define Request_Method_Lbs                           @"health/app/queryLbsApp"    //LBS数据
+
+#define Request_Method_Minute                        @"health/app/queryMinuteApp"    //分钟数据
+
+#define Request_Method_Pedometer                     @"health/app/queryPedometerApp"    //计步器数据
+
+#define Request_Method_Sleep                         @"health/app/querySleepApp"    //睡眠数据
+
+#define Request_Method_Weight                        @"health/app/queryWeightApp"    //体重数据
 
 
 
@@ -51,9 +79,6 @@
 
 
 #define Request_Method_CancelLogin                    @"apipassport-logout.html"  //注销登录
-
-
-
 #define Request_Method_BandLogosHtml                  @"apicommon-bandlogos.html"//首页品牌列表
 #define Request_Method_indexRecommon                  @"apicommon-recommends.html"//首页推荐
 #define Request_Method_brandGoods                     @"apibrand-brandGoods.html"//品牌商品列表

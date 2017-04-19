@@ -9,6 +9,8 @@
 #import "ECGViewController.h"
 
 @interface ECGViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *NameLabel;
+@property (weak, nonatomic) IBOutlet UITableView *ListTableView;
 
 @end
 
@@ -17,6 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+
+
+- (IBAction)BackBtn:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)userBtn:(UIButton *)sender {
 }
 
 - (void)didReceiveMemoryWarning {

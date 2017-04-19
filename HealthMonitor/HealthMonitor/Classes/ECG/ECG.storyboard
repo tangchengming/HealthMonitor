@@ -28,19 +28,15 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bar" translatesAutoresizingMaskIntoConstraints="NO" id="xlg-WV-kPj">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_fat" translatesAutoresizingMaskIntoConstraints="NO" id="JeS-Vn-QLO">
-                                        <rect key="frame" x="335" y="17" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="dA9-n6-D2K"/>
-                                            <constraint firstAttribute="width" constant="30" id="eRM-fH-GyL"/>
-                                        </constraints>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6t-s6-4y6">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="a8p-12-f2t"/>
                                         </constraints>
                                         <state key="normal" image="back_arrow"/>
+                                        <connections>
+                                            <action selector="BackBtn:" destination="GCW-d4-E5I" eventType="touchUpInside" id="Nvs-4E-ScY"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心电监测仪" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzy-Pv-tKU">
                                         <rect key="frame" x="30" y="0.0" width="305" height="64"/>
@@ -48,17 +44,28 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AL8-HD-FWM">
+                                        <rect key="frame" x="335" y="17" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="99t-S4-GXn"/>
+                                            <constraint firstAttribute="height" constant="30" id="q7C-mj-ZIO"/>
+                                        </constraints>
+                                        <state key="normal" image="user_fat"/>
+                                        <connections>
+                                            <action selector="userBtn:" destination="GCW-d4-E5I" eventType="touchUpInside" id="6jF-um-PWT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xlg-WV-kPj" secondAttribute="trailing" id="4qK-DT-g96"/>
                                     <constraint firstAttribute="bottom" secondItem="Wzy-Pv-tKU" secondAttribute="bottom" id="9aj-dV-1a4"/>
-                                    <constraint firstItem="JeS-Vn-QLO" firstAttribute="leading" secondItem="Wzy-Pv-tKU" secondAttribute="trailing" id="BZg-8C-ogr"/>
-                                    <constraint firstAttribute="trailing" secondItem="JeS-Vn-QLO" secondAttribute="trailing" constant="10" id="CMO-br-NHF"/>
-                                    <constraint firstItem="JeS-Vn-QLO" firstAttribute="centerY" secondItem="GqJ-HI-bdK" secondAttribute="centerY" id="CyM-41-z3Z"/>
                                     <constraint firstItem="y6t-s6-4y6" firstAttribute="top" secondItem="GqJ-HI-bdK" secondAttribute="top" id="ICP-BI-7AK"/>
+                                    <constraint firstItem="AL8-HD-FWM" firstAttribute="leading" secondItem="Wzy-Pv-tKU" secondAttribute="trailing" id="L6Q-yq-Prd"/>
+                                    <constraint firstAttribute="trailing" secondItem="AL8-HD-FWM" secondAttribute="trailing" constant="10" id="LFd-tt-dLJ"/>
                                     <constraint firstItem="xlg-WV-kPj" firstAttribute="leading" secondItem="GqJ-HI-bdK" secondAttribute="leading" id="Qdk-Qp-rjf"/>
                                     <constraint firstItem="xlg-WV-kPj" firstAttribute="top" secondItem="GqJ-HI-bdK" secondAttribute="top" id="Swb-vm-aan"/>
                                     <constraint firstItem="Wzy-Pv-tKU" firstAttribute="top" secondItem="GqJ-HI-bdK" secondAttribute="top" id="Xh9-f9-upe"/>
+                                    <constraint firstItem="AL8-HD-FWM" firstAttribute="centerY" secondItem="GqJ-HI-bdK" secondAttribute="centerY" id="dRx-wt-ceS"/>
                                     <constraint firstItem="Wzy-Pv-tKU" firstAttribute="leading" secondItem="y6t-s6-4y6" secondAttribute="trailing" id="eLM-b8-lTP"/>
                                     <constraint firstAttribute="height" constant="64" id="efN-LF-G3J"/>
                                     <constraint firstItem="y6t-s6-4y6" firstAttribute="leading" secondItem="GqJ-HI-bdK" secondAttribute="leading" id="fgY-sd-kcO"/>
@@ -198,10 +205,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="mJJ-oe-CQ6" kind="show" id="y1l-c3-6Pq"/>
+                                            <outlet property="TimeLabel" destination="GSS-GT-hZo" id="T4X-VY-0J4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GCW-d4-E5I" id="eBH-az-sAG"/>
+                                    <outlet property="delegate" destination="GCW-d4-E5I" id="1VW-CY-5BS"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,10 +230,14 @@
                             <constraint firstAttribute="trailing" secondItem="ZAa-BH-UEk" secondAttribute="trailing" id="pc9-Fq-Koc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ListTableView" destination="ZAa-BH-UEk" id="4KN-LB-njO"/>
+                        <outlet property="NameLabel" destination="2zM-1k-buj" id="GlS-Kb-2Ep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOg-Rl-4an" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="90"/>
+            <point key="canvasLocation" x="44" y="89.505247376311857"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="AW6-Ht-DNU">

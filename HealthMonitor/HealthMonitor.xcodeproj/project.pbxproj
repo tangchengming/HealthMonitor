@@ -46,6 +46,7 @@
 		2B6FA4AE1E9E0CE80035281D /* BGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4AD1E9E0CE80035281D /* BGMViewController.m */; };
 		2B6FA4B21E9E300F0035281D /* PublicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4B11E9E300F0035281D /* PublicView.m */; };
 		2B6FA4B41E9E30350035281D /* PublicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6FA4B31E9E30350035281D /* PublicView.xib */; };
+		2B793A361EA738C300FFEECB /* BloodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B793A351EA738C300FFEECB /* BloodModel.m */; };
 		2B7B119D1E9F266800951E37 /* BPM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B119C1E9F266800951E37 /* BPM.storyboard */; };
 		2B7B11A01E9F4C7200951E37 /* MeasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */; };
 		2B7B11A31E9F4CAE00951E37 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B11A21E9F4CAE00951E37 /* StatisticsViewController.m */; };
@@ -163,6 +164,8 @@
 		2B6FA4B01E9E300F0035281D /* PublicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicView.h; sourceTree = "<group>"; };
 		2B6FA4B11E9E300F0035281D /* PublicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicView.m; sourceTree = "<group>"; };
 		2B6FA4B31E9E30350035281D /* PublicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicView.xib; sourceTree = "<group>"; };
+		2B793A341EA738C300FFEECB /* BloodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloodModel.h; sourceTree = "<group>"; };
+		2B793A351EA738C300FFEECB /* BloodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloodModel.m; sourceTree = "<group>"; };
 		2B7B119C1E9F266800951E37 /* BPM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BPM.storyboard; sourceTree = "<group>"; };
 		2B7B119E1E9F4C7200951E37 /* MeasureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureViewController.h; sourceTree = "<group>"; };
 		2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureViewController.m; sourceTree = "<group>"; };
@@ -534,6 +537,8 @@
 		2B64A3EF1E9C841D005E93BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2B793A341EA738C300FFEECB /* BloodModel.h */,
+				2B793A351EA738C300FFEECB /* BloodModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1113,6 +1118,7 @@
 				2B6F53121EA5BC9300449A02 /* UIView+Extension.m in Sources */,
 				2B66DA7E1EA0AC27005A41C3 /* EarStatisticsViewController.m in Sources */,
 				2B64A3DB1E9C7F6D005E93BD /* RegistViewController.m in Sources */,
+				2B793A361EA738C300FFEECB /* BloodModel.m in Sources */,
 				2B64A3D81E9C7F6D005E93BD /* HomeViewController.m in Sources */,
 				2B64A3F51E9CAAB6005E93BD /* AlkBGMViewController.m in Sources */,
 				2BC32B7E1E8DFCBA00020BFE /* AppDelegate.m in Sources */,

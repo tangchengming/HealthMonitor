@@ -48,13 +48,16 @@
      *  添加手势：也就是当用户点击视图之后，对这个操作进行反应
      */
    
-    
+    // 添加触摸事件
+    _SexView.userInteractionEnabled = YES;
     //初始化一个手势
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(alterHeadPortrait:)];
     //给SexView添加手势
     [_SexView addGestureRecognizer:singleTap];
     
     //初始化一个手势
+    
+    _AgeView.userInteractionEnabled = YES;
     UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(alterHeadPortrait1:)];
     //给SexView添加手势
     [_AgeView addGestureRecognizer:singleTap1];
@@ -129,10 +132,19 @@
     
     [RequestManager httpRequestPOST:Request_Method_NewUser parameters:params success:^(id responseObject) {
         
-        UIStoryboard *storboard = self.storyboard;
-        UserViewController *UserVC = [storboard instantiateViewControllerWithIdentifier:@"UserVC"];
+        if ([[responseObject objectForKey:@"flag"]integerValue]){
+            
+            UIStoryboard *storboard = self.storyboard;
+            UserViewController *UserVC = [storboard instantiateViewControllerWithIdentifier:@"UserVC"];
+            
+            [self presentViewController:UserVC animated:YES completion:nil];
         
-        [self presentViewController:UserVC animated:YES completion:nil];;
+        }else{
+        
+            [MBProgressHUD showMessage:@"添加失败" toView:self.view afterDelty:1.0];
+        }
+        
+        
         
     } failure:^(NSError *error) {
         

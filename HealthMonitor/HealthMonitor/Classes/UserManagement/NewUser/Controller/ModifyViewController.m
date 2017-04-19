@@ -7,7 +7,8 @@
 //
 
 #import "ModifyViewController.h"
-
+#import "WSDatePickerView.h"
+#import "UserViewController.h"
 @interface ModifyViewController ()
 @property (weak, nonatomic) IBOutlet UIView *NameView;
 @property (weak, nonatomic) IBOutlet UITextField *NameTextField;
@@ -24,7 +25,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *SaveBtn;
 
-//@property (strong, nonatomic) NSString *sex;
+@property (strong, nonatomic) NSString *sex1;
 @end
 
 @implementation ModifyViewController
@@ -44,6 +45,129 @@
     NSLog(@"名字：%@  性别：%d  年纪：%@",_name,_sex,_birth);
     
 }
+
+
+- (void)SexView1{
+    
+    /**
+     *  添加手势：也就是当用户点击视图之后，对这个操作进行反应
+     */
+    
+    
+    //初始化一个手势
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(alterHeadPortrait:)];
+    //给SexView添加手势
+    [_SexView addGestureRecognizer:singleTap];
+    
+    //初始化一个手势
+    UITapGestureRecognizer *singleTap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(alterHeadPortrait1:)];
+    //给SexView添加手势
+    [_AgeView addGestureRecognizer:singleTap1];
+}
+
+
+//  方法：alterHeadPortrait
+-(void)alterHeadPortrait:(UITapGestureRecognizer *)gesture{
+    
+    
+    /**
+     *  弹出提示框
+     */
+    //初始化提示框
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    //按钮：从相册选择，类型：UIAlertActionStyleDefault
+    [alert addAction:[UIAlertAction actionWithTitle:@"男" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        _SexLabel.text = @"男";
+        _sex1 = @"1";
+    }]];
+    //按钮：拍照，类型：UIAlertActionStyleDefault
+    [alert addAction:[UIAlertAction actionWithTitle:@"女" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+        
+        _SexLabel.text = @"女";
+        _sex1 = @"0";
+        
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+    
+    
+}
+
+
+-(void)alterHeadPortrait1:(UITapGestureRecognizer *)gesture{
+    
+    WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDay CompleteBlock:^(NSDate *startDate) {
+        NSString *date = [startDate stringWithFormat:@"yyyy-MM-dd"];
+        
+        _AgeLabel.text = date;
+        
+    }];
+    datepicker.doneButtonColor = [UIColor orangeColor];//确定按钮的颜色
+    [datepicker show];
+    
+}
+
+- (IBAction)SaveButton:(UIButton *)sender {
+    
+    if ([self.cardTextField.text isEqualToString: @""]){
+        
+        [MBProgressHUD showMessage:@"卡号不能为空！" toView:self.view afterDelty:1.0];
+    }else{
+        
+        [self setNetWorkData];
+    }
+    
+    
+}
+
+
+- (void)setNetWorkData{
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"userId"] = @"2";
+    
+    if ([self.NameTextField.text isEqualToString: @""]){
+        
+        params[@"name"] = _NameTextField.placeholder;
+    }else{
+        params[@"name"] = _NameTextField.text;
+    }
+    
+    params[@"birth"] =  _AgeLabel.text;
+    
+    if ([_SexLabel.text isEqualToString:@"男"]) {
+        params[@"sex"] = @"1";
+    }else{
+        params[@"sex"] = @"0";
+    }
+    
+    [RequestManager httpRequestPOST:Request_Method_EditUser parameters:params success:^(id responseObject) {
+        
+        if ([[responseObject objectForKey:@"flag"]integerValue]){
+            
+            [MBProgressHUD showMessage:@"修改成功" toView:self.view afterDelty:1.0];
+            
+            //跳转
+            UIStoryboard *storboard = self.storyboard;
+            UserViewController *UserVC = [storboard instantiateViewControllerWithIdentifier:@"UserVC"];
+            [self presentViewController:UserVC animated:YES completion:nil];
+            
+            
+        }else{
+            
+            [MBProgressHUD showMessage:@"修改失败" toView:self.view afterDelty:1.0];
+        }
+        
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

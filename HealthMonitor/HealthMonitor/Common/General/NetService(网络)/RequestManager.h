@@ -16,6 +16,12 @@
            success:(void (^)(id responseObject))success
            failure:(void (^)(NSError *error))failure;
 
+//封装POST请求
++(void)httpPOST:(NSString *)string
+            parameters:(id)parameters
+               success:(void (^)(id responseObject))success
+               failure:(void (^)(NSError *error))failure;
+
 //封装GET请求
 +(void)httpRequestGET:(NSString *)string
             parameters:(id)parameters

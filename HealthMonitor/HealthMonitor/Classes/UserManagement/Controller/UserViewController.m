@@ -49,7 +49,7 @@
 - (void)setNetWorkData{
 
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"userId"] = @"2";
+    params[@"userId"] = @"23";
     
     [RequestManager httpRequestPOST:Request_Method_UserList parameters:params success:^(id responseObject) {
         NSLog(@"新建成员111：%@",responseObject);

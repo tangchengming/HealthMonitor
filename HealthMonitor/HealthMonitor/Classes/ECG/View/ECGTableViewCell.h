@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ECGTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *TimeLabel;
 
 @end
