@@ -1,14 +1,18 @@
 //
-//  ECG_DetailsViewController.h
+//  Ecg_structureModel.h
 //  HealthMonitor
 //
-//  Created by Atohuyo on 2017/4/12.
+//  Created by Atohuyo on 2017/4/20.
 //  Copyright © 2017年 Atohuyo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ECG_DetailsViewController : UIViewController
+@interface Ecg_structureModel : NSObject
+
+
+@property (nonatomic, strong) NSArray *Datas;//返回数据信息列表
+
 /** 心律 */
 @property (nonatomic, copy) NSString   *avr_heartrate;
 

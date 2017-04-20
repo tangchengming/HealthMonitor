@@ -209,11 +209,7 @@
         
     }else{
         
-        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-        [user removeObjectForKey:@"tel"];
-        [user removeObjectForKey:@"name"];
-        [user removeObjectForKey:@"userid"];
-        [user synchronize];
+        
         [CZUserDefalt writeDataWithKey:@"loginStatus" andValue:@"NO"];
         [CZUserDefalt removeAllData];
         

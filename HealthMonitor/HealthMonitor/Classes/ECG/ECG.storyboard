@@ -95,14 +95,14 @@
                                 <rect key="frame" x="0.0" y="139" width="375" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="73a-pK-8vb" customClass="ECGTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EcgCell" rowHeight="60" id="73a-pK-8vb" customClass="ECGTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="73a-pK-8vb" id="WF0-WS-Llk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03-2810:30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSS-GT-hZo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03-2810:30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSS-GT-hZo">
                                                     <rect key="frame" x="10" y="10" width="42" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="idC-Ja-mdi"/>
@@ -206,6 +206,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="TimeLabel" destination="GSS-GT-hZo" id="T4X-VY-0J4"/>
+                                            <outlet property="heartrateLabel" destination="VQS-ag-xho" id="t3C-le-Mxg"/>
+                                            <outlet property="isarrhythmiaLabel" destination="DVT-HF-2um" id="mfx-OH-aLj"/>
+                                            <outlet property="waveformLabel" destination="3rS-kl-f6m" id="RT9-JS-adR"/>
+                                            <outlet property="wholewaveLabel" destination="4jk-QN-yCN" id="1sp-KN-dH9"/>
+                                            <outlet property="xinlvLabel" destination="nBC-dn-kyk" id="bjT-aK-2g9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -290,54 +295,54 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q5o-YX-Agc">
-                                <rect key="frame" x="0.0" y="204" width="375" height="463"/>
+                                <rect key="frame" x="0.0" y="203.5" width="375" height="463.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pi-iJ-CzI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="134"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="133.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-03-28 10:30:20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA4-Uv-w5u">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ST段正常" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3I-CU-4kb">
-                                        <rect key="frame" x="0.0" y="45" width="125" height="44"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="125" height="44.5"/>
                                         <color key="backgroundColor" red="0.94928175209999999" green="0.47166228290000001" blue="0.0042740604840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有发现心律失常" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QR3-pw-IQJ">
-                                        <rect key="frame" x="125" y="45" width="125" height="44"/>
+                                        <rect key="frame" x="125" y="44.5" width="125" height="44.5"/>
                                         <color key="backgroundColor" red="0.35560742020000002" green="0.81530803439999999" blue="0.86326771970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="波形质量过差" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdF-jr-z16">
-                                        <rect key="frame" x="250" y="45" width="125" height="44"/>
+                                        <rect key="frame" x="250" y="44.5" width="125" height="44.5"/>
                                         <color key="backgroundColor" red="0.94928175209999999" green="0.47166228290000001" blue="0.0042740604840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心律过慢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8Q-2q-cbi">
-                                        <rect key="frame" x="0.0" y="89" width="125" height="45"/>
+                                        <rect key="frame" x="0.0" y="89" width="125" height="44.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="整体波形异常" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-jO-bh1">
-                                        <rect key="frame" x="125" y="89" width="125" height="45"/>
+                                        <rect key="frame" x="125" y="89" width="125" height="44.5"/>
                                         <color key="backgroundColor" red="0.94928175209999999" green="0.47166228290000001" blue="0.0042740604840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心律：38" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7c-3W-8tq">
-                                        <rect key="frame" x="250" y="89" width="125" height="45"/>
+                                        <rect key="frame" x="250" y="89" width="125" height="44.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -377,7 +382,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tk-F7-Xbu">
-                                <rect key="frame" x="0.0" y="198" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="197.5" width="375" height="1"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="vof-vt-4jT"/>
@@ -402,6 +407,16 @@
                             <constraint firstAttribute="trailing" secondItem="q5o-YX-Agc" secondAttribute="trailing" id="y3s-80-LUD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ECGImageView" destination="q5o-YX-Agc" id="bZP-S2-1S1"/>
+                        <outlet property="TimeLabel" destination="yA4-Uv-w5u" id="cbX-Rl-ict"/>
+                        <outlet property="avr_heartrateLabel" destination="e7c-3W-8tq" id="AhD-Ph-61D"/>
+                        <outlet property="heartrateLabel" destination="W8Q-2q-cbi" id="8ZY-fe-SdE"/>
+                        <outlet property="isarrhythmiaLabel" destination="QR3-pw-IQJ" id="xmi-Zh-yQJ"/>
+                        <outlet property="stisnormalLabel" destination="d3I-CU-4kb" id="mAT-60-F9I"/>
+                        <outlet property="waveformLabel" destination="tdF-jr-z16" id="Doi-p9-wgL"/>
+                        <outlet property="wholewaveLabel" destination="VTY-jO-bh1" id="jBp-wL-GX2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1J-1A-3rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
