@@ -40,6 +40,9 @@
                                             <constraint firstAttribute="width" constant="30" id="T17-AN-C4k"/>
                                         </constraints>
                                         <state key="normal" image="back_arrow"/>
+                                        <connections>
+                                            <action selector="BackBtn:" destination="sZz-pE-xpn" eventType="touchUpInside" id="wVf-jH-D4N"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGW-aN-Liz">
                                         <rect key="frame" x="335" y="17" width="30" height="30"/>
@@ -48,6 +51,9 @@
                                             <constraint firstAttribute="width" constant="30" id="wKn-qC-QMU"/>
                                         </constraints>
                                         <state key="normal" image="user_fat"/>
+                                        <connections>
+                                            <action selector="UserBtn:" destination="sZz-pE-xpn" eventType="touchUpInside" id="cnm-aU-Nor"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -72,7 +78,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成员名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otP-UA-CJ3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
-                                        <color key="backgroundColor" red="0.94928175209999999" green="0.47166228290000001" blue="0.0042740604840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="j6L-ty-FEj"/>
                                         </constraints>
@@ -87,6 +93,9 @@
                                             <constraint firstAttribute="width" constant="30" id="zjd-gK-d9l"/>
                                         </constraints>
                                         <state key="normal" image="list_gray"/>
+                                        <connections>
+                                            <action selector="ListButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="KWB-gL-Gqx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWJ-ey-Lkl">
                                         <rect key="frame" x="295" y="93.5" width="30" height="30"/>
@@ -95,6 +104,9 @@
                                             <constraint firstAttribute="width" constant="30" id="ecK-Eo-LG4"/>
                                         </constraints>
                                         <state key="normal" image="curve_greem"/>
+                                        <connections>
+                                            <action selector="ChartButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="Wat-lq-6f8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -125,6 +137,14 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="selected" image="time_d"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="FatButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="cfT-fM-pbs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqL-Qt-lPR">
                                                 <rect key="frame" x="75" y="1" width="60" height="28"/>
@@ -136,6 +156,14 @@
                                                 <state key="normal" title="体质指数">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="BmiButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="gjB-Kw-Lcy"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz9-dz-xaI">
                                                 <rect key="frame" x="140" y="1" width="70" height="28"/>
@@ -147,25 +175,39 @@
                                                 <state key="normal" title="基础代谢值">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="BmrButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="YyU-ZQ-cfa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gX-WL-g5g">
-                                                <rect key="frame" x="295" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="275" y="0.0" width="40" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="SUf-5y-ZYE"/>
+                                                    <constraint firstAttribute="width" constant="40" id="SUf-5y-ZYE"/>
                                                 </constraints>
                                                 <state key="normal" title="周" backgroundImage="time_d">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="WeekButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="f0t-65-zrV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-9x-Aff">
-                                                <rect key="frame" x="335" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="325" y="0.0" width="40" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="3dO-3w-gOP"/>
+                                                    <constraint firstAttribute="width" constant="40" id="3dO-3w-gOP"/>
                                                 </constraints>
                                                 <state key="normal" title="月" backgroundImage="time_no">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="selected" title="周"/>
+                                                <connections>
+                                                    <action selector="MonthButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="Hhb-lx-Uoi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -217,6 +259,18 @@
                             <constraint firstItem="KJy-nH-pIg" firstAttribute="top" secondItem="YME-P4-KAX" secondAttribute="bottom" id="yyW-Ez-xyi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BmiBtn" destination="aqL-Qt-lPR" id="EGR-jY-Bme"/>
+                        <outlet property="BmrBtn" destination="uz9-dz-xaI" id="eaU-bf-WMK"/>
+                        <outlet property="ChartBtn" destination="jWJ-ey-Lkl" id="22t-XK-uiI"/>
+                        <outlet property="FatBtn" destination="Zc0-g8-KyZ" id="Qbf-ry-F83"/>
+                        <outlet property="ListBtn" destination="EqZ-Gt-h7F" id="RAC-pT-OQ7"/>
+                        <outlet property="MonthBtn" destination="wmt-9x-Aff" id="kTw-cn-mVB"/>
+                        <outlet property="NameLabel" destination="otP-UA-CJ3" id="8bv-RP-1cT"/>
+                        <outlet property="UserView" destination="ZVg-hd-n2X" id="z2E-cw-LbK"/>
+                        <outlet property="lineChartView" destination="SqC-14-Pnz" id="gmK-cs-azL"/>
+                        <outlet property="weekBtn" destination="8gX-WL-g5g" id="ReN-D8-u8X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtn-6h-dyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

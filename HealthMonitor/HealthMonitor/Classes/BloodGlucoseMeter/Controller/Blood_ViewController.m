@@ -1,22 +1,26 @@
 //
-//  BGMViewController.m
+//  Blood_ViewController.m
 //  HealthMonitor
 //
-//  Created by Atohuyo on 2017/4/12.
+//  Created by Atohuyo on 2017/4/21.
 //  Copyright © 2017年 Atohuyo. All rights reserved.
 //
 
-#import "BGMViewController.h"
+#import "Blood_ViewController.h"
 
-@interface BGMViewController ()
+@interface Blood_ViewController ()
 
 @end
 
-@implementation BGMViewController
+@implementation Blood_ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)backBtn:(UIButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

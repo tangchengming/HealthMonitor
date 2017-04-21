@@ -204,6 +204,9 @@
                                             <constraint firstAttribute="width" constant="30" id="TuR-nU-7M6"/>
                                         </constraints>
                                         <state key="normal" image="back_arrow"/>
+                                        <connections>
+                                            <action selector="BackBtn:" destination="TP4-jr-x6m" eventType="touchUpInside" id="Oso-aS-Tb1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1a-AP-Q6I">
                                         <rect key="frame" x="335" y="17" width="30" height="30"/>
@@ -212,6 +215,9 @@
                                             <constraint firstAttribute="width" constant="30" id="usK-8n-ahH"/>
                                         </constraints>
                                         <state key="normal" image="user_fat"/>
+                                        <connections>
+                                            <action selector="UserBtn:" destination="TP4-jr-x6m" eventType="touchUpInside" id="wwc-0k-89I"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -251,6 +257,16 @@
                             <constraint firstAttribute="trailing" secondItem="76l-7u-9hi" secondAttribute="trailing" id="nQt-hC-ajb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NameLabel" destination="beh-vQ-Cdb" id="PfW-eH-mlB"/>
+                        <outlet property="UserView" destination="ArT-t1-Hwc" id="JsG-BK-iW9"/>
+                        <outlet property="heartLabel" destination="aXq-hM-kgd" id="ybK-L2-Qc4"/>
+                        <outlet property="heartView" destination="BeB-Or-r9R" id="Gup-ir-qRY"/>
+                        <outlet property="highLabel" destination="4Ut-FE-BR1" id="zD8-pg-6bX"/>
+                        <outlet property="highView" destination="Fme-ce-2Wi" id="m9r-i4-4jR"/>
+                        <outlet property="lowLabel" destination="8K8-SB-7i8" id="c1h-wE-BlY"/>
+                        <outlet property="lowView" destination="YsA-dH-rRD" id="0UI-wn-Iwa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDs-2O-KYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,23 +1,27 @@
 //
-//  ECGViewController.m
+//  Ecg_ViewController.m
 //  HealthMonitor
 //
-//  Created by Atohuyo on 2017/4/12.
+//  Created by Atohuyo on 2017/4/21.
 //  Copyright © 2017年 Atohuyo. All rights reserved.
 //
 
-#import "ECGViewController.h"
-#import "Ecg_structureModel.h"
-#import "ECG_DetailsViewController.m"
+#import "Ecg_ViewController.h"
 #import "ECGTableViewCell.h"
-@interface ECGViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "Ecg_structureModel.h"
+#import "ECG_DetailsViewController.h"
+@interface Ecg_ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIView *UserView;
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UITableView *ListTableView;
+
 @property (strong, nonatomic)NSMutableArray *ECGListDataArr;//模型对象数组（ 列表数据源）
 @property (strong, nonatomic)NSMutableArray *picturedataArr;//模型对象数组（ 心电图列表数据源）
+
+
 @end
 
-@implementation ECGViewController
+@implementation Ecg_ViewController
 
 - (NSMutableArray *)ECGListDataArr{
     
@@ -41,11 +45,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self TableView];
+    [self setNetWorkData];
 }
 
 
 - (void)TableView{
-
+    
     self.ListTableView.delegate = self;
     self.ListTableView.dataSource = self;
     self.ListTableView.tableFooterView = [UIView new];
@@ -54,7 +60,7 @@
 
 //数据列表网络请求
 - (void)setNetWorkData{
-
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"cardId"] = @"8e0de850";
     params[@"member_id"] = @"25";
@@ -70,7 +76,7 @@
             
             [MBProgressHUD showMessage:@"暂时还没有数据！" toView:self.view afterDelty:1.0];
         }
-
+        
         
     } failure:^(NSError *error) {
         
@@ -150,11 +156,13 @@
     
 }
 
-- (IBAction)BackBtn:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
-- (IBAction)userBtn:(UIButton *)sender {
+- (IBAction)UserBtn:(UIButton *)sender {
+}
+- (IBAction)backBtn:(UIButton *)sender {
+    
+    [self  dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

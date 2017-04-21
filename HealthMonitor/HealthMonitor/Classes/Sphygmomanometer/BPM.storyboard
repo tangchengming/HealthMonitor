@@ -42,6 +42,9 @@
                                             <constraint firstAttribute="width" constant="30" id="udd-oS-W6V"/>
                                         </constraints>
                                         <state key="normal" image="back_arrow"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="lFO-Pk-FQw" eventType="touchUpInside" id="bfl-xO-xIF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5e-G7-OeM">
                                         <rect key="frame" x="335" y="17" width="30" height="30"/>
@@ -133,21 +136,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高压/mmhg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaE-lx-7uP">
-                                        <rect key="frame" x="0.0" y="111" width="125" height="56"/>
+                                        <rect key="frame" x="0.0" y="111" width="125" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="低压/mmhg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBK-Zf-FNv">
-                                        <rect key="frame" x="125" y="111" width="125" height="56"/>
+                                        <rect key="frame" x="125" y="111" width="125" height="55"/>
                                         <color key="backgroundColor" red="0.94928175209999999" green="0.47166228290000001" blue="0.0042740604840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心率/bpm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cY2-dK-uTC">
-                                        <rect key="frame" x="250" y="111" width="125" height="56"/>
+                                        <rect key="frame" x="250" y="111" width="125" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
@@ -458,14 +461,14 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJA-EH-fhV">
-                                        <rect key="frame" x="306.5" y="19.5" width="27" height="18.5"/>
+                                        <rect key="frame" x="309" y="19.5" width="26" height="18.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NJA-EH-fhV" secondAttribute="height" multiplier="32:23" id="6SD-xM-KqG"/>
                                         </constraints>
                                         <state key="normal" image="curve_greem"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtM-Tg-JoB">
-                                        <rect key="frame" x="343.5" y="19" width="26.5" height="18.5"/>
+                                        <rect key="frame" x="345" y="19" width="25" height="18.5"/>
                                         <state key="normal" image="list_gray"/>
                                     </button>
                                 </subviews>

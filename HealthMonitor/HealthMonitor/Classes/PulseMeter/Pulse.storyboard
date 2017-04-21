@@ -40,6 +40,9 @@
                                             <constraint firstAttribute="width" constant="30" id="hrD-zn-vP8"/>
                                         </constraints>
                                         <state key="normal" image="back_arrow"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="psf-Y6-qi2" eventType="touchUpInside" id="fAy-cp-2sG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqU-jW-QGK">
                                         <rect key="frame" x="335" y="17" width="30" height="30"/>

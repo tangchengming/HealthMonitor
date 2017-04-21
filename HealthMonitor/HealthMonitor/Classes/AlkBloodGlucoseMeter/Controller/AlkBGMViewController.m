@@ -9,6 +9,17 @@
 #import "AlkBGMViewController.h"
 
 @interface AlkBGMViewController ()
+@property (weak, nonatomic) IBOutlet UIView *UserView;
+@property (weak, nonatomic) IBOutlet UILabel *NameLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *highView;
+@property (weak, nonatomic) IBOutlet UILabel *highLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *lowView;
+@property (weak, nonatomic) IBOutlet UILabel *lowLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *heartView;
+@property (weak, nonatomic) IBOutlet UILabel *heartLabel;
 
 @end
 
@@ -17,6 +28,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)UserBtn:(UIButton *)sender {
+}
+
+
+
+- (IBAction)BackBtn:(UIButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

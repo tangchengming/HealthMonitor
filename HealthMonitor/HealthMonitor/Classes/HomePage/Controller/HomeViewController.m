@@ -11,11 +11,11 @@
 #import "EarMeasureViewController.h"
 #import "WeighViewController.h"
 #import "MeasureViewController.h"
-#import "BGMViewController.h"
+#import "Blood_ViewController.h"
 #import "PulseMeterViewController.h"
 #import "AlkBGMViewController.h"
 #import "FatMonitorViewController.h"
-#import "ECGViewController.h"
+#import "Ecg_ViewController.h"
 
 @interface HomeViewController ()
 
@@ -82,8 +82,8 @@
     // 获取指定的Storyboard，name填写Storyboard的文件名
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BGM" bundle:nil];
     // 从Storyboard上按照identifier获取指定的界面（VC），identifier必须是唯一的
-    BGMViewController *BGMVC = [storyboard instantiateViewControllerWithIdentifier:@"BGMVC"];
-    [self presentViewController:BGMVC animated:YES completion:nil];
+    Blood_ViewController *BgmVC = [storyboard instantiateViewControllerWithIdentifier:@"BGMVC"];
+    [self presentViewController:BgmVC animated:YES completion:nil];
 
 }
 
@@ -123,11 +123,11 @@
 //跳转心电监测
 - (IBAction)ECGBtn:(UIButton *)sender {
     
-    // 获取指定的Storyboard，name填写Storyboard的文件名
+     //获取指定的Storyboard，name填写Storyboard的文件名
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ECG" bundle:nil];
     // 从Storyboard上按照identifier获取指定的界面（VC），identifier必须是唯一的
-    ECGViewController *ECGVC = [storyboard instantiateViewControllerWithIdentifier:@"ECGVC"];
-    [self presentViewController:ECGVC animated:YES completion:nil];
+    Ecg_ViewController *EcgVC = [storyboard instantiateViewControllerWithIdentifier:@"ECGVC"];
+    [self presentViewController:EcgVC animated:YES completion:nil];
 
 }
 

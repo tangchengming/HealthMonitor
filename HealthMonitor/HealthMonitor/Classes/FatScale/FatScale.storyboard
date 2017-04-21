@@ -41,6 +41,9 @@
                                             <constraint firstAttribute="width" constant="30" id="Hv3-eF-Sik"/>
                                         </constraints>
                                         <state key="normal" image="back_arrow"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="HgM-Zg-k4P" eventType="touchUpInside" id="a6Y-J9-qJw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiM-1f-laa">
                                         <rect key="frame" x="335" y="17" width="30" height="30"/>
