@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03-2810:30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5g4-Qs-tXc">
@@ -99,6 +99,17 @@
                     <constraint firstItem="ban-6Z-7ch" firstAttribute="bottom" secondItem="hRI-ex-d3x" secondAttribute="bottom" id="tT5-nJ-a4j"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.94872456552245255" green="0.95871113989637302" blue="0.95871113989637302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="biLabel" destination="ban-6Z-7ch" id="N7w-BL-Mr9"/>
+                <outlet property="bmiLabel" destination="JZt-Gh-pcV" id="A1U-ov-oS8"/>
+                <outlet property="bmrLabel" destination="x8C-G4-xCa" id="zlf-7M-47a"/>
+                <outlet property="bodytypeLabel" destination="Sot-4J-dmd" id="LIn-21-6d3"/>
+                <outlet property="brLabel" destination="4oZ-8o-j9Y" id="jBE-bA-A64"/>
+                <outlet property="collectdateLabel" destination="5g4-Qs-tXc" id="E9b-kV-gs1"/>
+                <outlet property="fatLabel" destination="hRI-ex-d3x" id="00H-Uk-XuS"/>
+                <outlet property="fatcontentLabel" destination="MD1-dx-J7m" id="bLX-UP-5Uk"/>
+            </connections>
             <point key="canvasLocation" x="-32" y="-17"/>
         </tableViewCell>
     </objects>

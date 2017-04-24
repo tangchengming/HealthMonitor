@@ -820,8 +820,8 @@
 		2B7C91201EA9F01800F91418 /* ECG */ = {
 			isa = PBXGroup;
 			children = (
-				2B7C91211EA9F01800F91418 /* Controller */,
 				2B7C91261EA9F01800F91418 /* ECG.storyboard */,
+				2B7C91211EA9F01800F91418 /* Controller */,
 				2B7C91271EA9F01800F91418 /* Model */,
 				2B7C912A1EA9F01800F91418 /* View */,
 			);

@@ -268,6 +268,7 @@
                         <outlet property="MonthBtn" destination="wmt-9x-Aff" id="kTw-cn-mVB"/>
                         <outlet property="NameLabel" destination="otP-UA-CJ3" id="8bv-RP-1cT"/>
                         <outlet property="UserView" destination="ZVg-hd-n2X" id="z2E-cw-LbK"/>
+                        <outlet property="XzView" destination="Pzs-eM-0oF" id="B9h-e8-SU8"/>
                         <outlet property="lineChartView" destination="SqC-14-Pnz" id="gmK-cs-azL"/>
                         <outlet property="weekBtn" destination="8gX-WL-g5g" id="ReN-D8-u8X"/>
                     </connections>

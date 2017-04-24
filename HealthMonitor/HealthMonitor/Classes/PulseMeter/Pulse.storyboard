@@ -51,6 +51,9 @@
                                             <constraint firstAttribute="height" constant="30" id="vER-zb-pMR"/>
                                         </constraints>
                                         <state key="normal" image="user_fat"/>
+                                        <connections>
+                                            <action selector="UserBtn:" destination="psf-Y6-qi2" eventType="touchUpInside" id="Phk-Iz-ZKM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -88,6 +91,9 @@
                                         <state key="normal" title="周" backgroundImage="time_d">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="WeekButton:" destination="psf-Y6-qi2" eventType="touchUpInside" id="wWF-eo-ON0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eer-C5-L17">
                                         <rect key="frame" x="273" y="45" width="62" height="30"/>
@@ -97,6 +103,9 @@
                                         <state key="normal" title="月" backgroundImage="time_no">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="MonthButton:" destination="psf-Y6-qi2" eventType="touchUpInside" id="gxB-jV-vDG"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="脉搏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYo-yL-8cc">
                                         <rect key="frame" x="0.0" y="203" width="40" height="20"/>
@@ -105,7 +114,7 @@
                                             <constraint firstAttribute="height" constant="20" id="cZ9-Xx-1fw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="血氧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kak-0D-Bri">
@@ -129,7 +138,7 @@
                                         <rect key="frame" x="0.0" y="103" width="125" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均血氧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzL-Mw-szV">
@@ -183,7 +192,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-hx-LcD">
                                 <rect key="frame" x="0.0" y="287" width="375" height="380"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,6 +210,14 @@
                             <constraint firstAttribute="trailing" secondItem="bGL-x1-wyD" secondAttribute="trailing" id="uAS-m1-I1b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MonthBtn" destination="Eer-C5-L17" id="7r1-v5-tfx"/>
+                        <outlet property="NameLabel" destination="AQC-tc-OoF" id="fUK-bQ-hmH"/>
+                        <outlet property="lineChartView" destination="FIx-hx-LcD" id="IiF-QZ-asG"/>
+                        <outlet property="oxygenLabel" destination="TzG-SB-fVI" id="oof-yV-Od7"/>
+                        <outlet property="pulseLabel" destination="YfV-KK-QKB" id="qGf-Ex-jXh"/>
+                        <outlet property="weekBtn" destination="vpg-TM-UUC" id="KeV-jq-kbf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqH-DG-8gL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
