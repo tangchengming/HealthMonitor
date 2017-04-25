@@ -75,8 +75,10 @@
     [self setNetWorkData];
     
     //取数组最后一个元素
-    _pulseLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
-    _oxygenLabel.text = [_oxygenArr objectAtIndex:_oxygenArr.count-1];
+    //_pulseLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
+    _pulseLabel.text = @"000";
+    //_oxygenLabel.text = [_oxygenArr objectAtIndex:_oxygenArr.count-1];
+    _oxygenLabel.text = @"000";
     
     [self lineChart];
     
@@ -93,8 +95,8 @@
     [RequestManager httpPOST:Request_Method_Fat parameters:params success:^(id responseObject) {
         
         _DatasArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"]];
-        _collectdateArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"pulse"]];
-        _pulseArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"fatcontent"]];
+        _collectdateArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"collectdate"]];
+        _pulseArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"pulse"]];
         _oxygenArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"oxygen"]];
        
     } failure:^(NSError *error) {
@@ -108,11 +110,11 @@
     
     
     
-    self.lineChartView.max = 150;
+    self.lineChartView.max = 120;
     self.lineChartView.min = 30;
     
     
-    self.lineChartView.interval = 30;
+    self.lineChartView.interval = 20;
     
     NSMutableArray* yAxisValues = [@[] mutableCopy];
     for (int i=0; i<6; i++) {

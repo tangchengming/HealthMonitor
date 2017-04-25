@@ -9,6 +9,21 @@
 #import "MeasureViewController.h"
 
 @interface MeasureViewController ()
+@property (weak, nonatomic) IBOutlet UIView *UserView;
+@property (weak, nonatomic) IBOutlet UILabel *NameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *highLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *lowLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *heartLabel;
+@property (weak, nonatomic) IBOutlet UILabel *heLabel;
+
+@property (weak, nonatomic) IBOutlet UIView *MIView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *bluetoothImageView;
 
 @end
 
@@ -18,6 +33,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+
+
+
+
+
+
+- (IBAction)ceshiBtn:(UIButton *)sender {
+}
+
+
+
+
 - (IBAction)backBtn:(UIButton *)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];

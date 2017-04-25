@@ -51,7 +51,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.94872456549999995" green="0.95871113990000001" blue="0.95871113990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="8K8-SB-7i8" firstAttribute="leading" secondItem="YsA-dH-rRD" secondAttribute="leading" id="RWJ-2a-a4M"/>
                                             <constraint firstAttribute="height" constant="60" id="UVp-Sw-oU1"/>
@@ -237,7 +237,7 @@
                                     <constraint firstAttribute="trailing" secondItem="gV4-bZ-7KT" secondAttribute="trailing" id="umQ-rx-5qq"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76l-7u-9hi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76l-7u-9hi" customClass="PNLineChartView">
                                 <rect key="frame" x="0.0" y="306.5" width="375" height="360.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -260,10 +260,13 @@
                     <connections>
                         <outlet property="NameLabel" destination="beh-vQ-Cdb" id="PfW-eH-mlB"/>
                         <outlet property="UserView" destination="ArT-t1-Hwc" id="JsG-BK-iW9"/>
+                        <outlet property="hLabel" destination="Vg9-zJ-axK" id="uwI-ce-Vky"/>
+                        <outlet property="heLabel" destination="PQH-Sl-ExJ" id="lJx-ea-Mem"/>
                         <outlet property="heartLabel" destination="aXq-hM-kgd" id="ybK-L2-Qc4"/>
                         <outlet property="heartView" destination="BeB-Or-r9R" id="Gup-ir-qRY"/>
                         <outlet property="highLabel" destination="4Ut-FE-BR1" id="zD8-pg-6bX"/>
                         <outlet property="highView" destination="Fme-ce-2Wi" id="m9r-i4-4jR"/>
+                        <outlet property="lLabel" destination="LnV-fm-c8P" id="ekQ-jU-gLC"/>
                         <outlet property="lineChartView" destination="76l-7u-9hi" id="mV2-lj-8Tt"/>
                         <outlet property="lowLabel" destination="8K8-SB-7i8" id="c1h-wE-BlY"/>
                         <outlet property="lowView" destination="YsA-dH-rRD" id="0UI-wn-Iwa"/>

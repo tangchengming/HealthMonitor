@@ -14,12 +14,16 @@
 
 @property (weak, nonatomic) IBOutlet UIView *highView;
 @property (weak, nonatomic) IBOutlet UILabel *highLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *lowView;
 @property (weak, nonatomic) IBOutlet UILabel *lowLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *heartView;
 @property (weak, nonatomic) IBOutlet UILabel *heartLabel;
+@property (weak, nonatomic) IBOutlet UILabel *heLabel;
+
 @property (strong, nonatomic) IBOutlet PNLineChartView *lineChartView;
 
 
@@ -34,14 +38,6 @@
 
 @implementation AlkBGMViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 
 
@@ -101,9 +97,17 @@
     [self setNetWorkData];
     
     //取数组最后一个元素
-    _heartLabel.text = [_systolicpressureArr objectAtIndex:_systolicpressureArr.count-1];
-    _lowLabel.text = [_diastolicpressureArr objectAtIndex:_diastolicpressureArr.count-1];
-    _heartLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
+    //_heartLabel.text = [_systolicpressureArr objectAtIndex:_systolicpressureArr.count-1];
+    _heartLabel.text = @"000";
+    _hLabel.text = @"高压/mmhg";
+    
+    //_lowLabel.text = [_diastolicpressureArr objectAtIndex:_diastolicpressureArr.count-1];
+    _lowLabel.text = @"000";
+    _lLabel.text = @"低压/mmhg";
+    
+    //_heartLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
+    _heartLabel.text = @"000";
+    _heLabel.text = @"心率/bpm";
     
     [self lineChart];
 }

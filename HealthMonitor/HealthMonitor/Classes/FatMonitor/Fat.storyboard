@@ -227,7 +227,7 @@
                                             <constraint firstItem="Zc0-g8-KyZ" firstAttribute="centerY" secondItem="Pzs-eM-0oF" secondAttribute="centerY" id="yOZ-Rd-2ZR"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqC-14-Pnz">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqC-14-Pnz" customClass="PNLineChartView">
                                         <rect key="frame" x="0.0" y="40" width="375" height="409.5"/>
                                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>

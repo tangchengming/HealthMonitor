@@ -156,7 +156,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.92541915180000001" green="0.92553013559999997" blue="0.92538142199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="OzL-Mw-szV" firstAttribute="top" secondItem="TzG-SB-fVI" secondAttribute="bottom" id="2aF-VT-gju"/>
                                     <constraint firstItem="Eer-C5-L17" firstAttribute="width" secondItem="bGL-x1-wyD" secondAttribute="width" multiplier="1:6" id="5jZ-RD-gaS"/>
@@ -190,7 +190,7 @@
                                     <constraint firstItem="Ra0-Kp-4l2" firstAttribute="leading" secondItem="bGL-x1-wyD" secondAttribute="leading" id="yqe-Xb-D8g"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-hx-LcD">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-hx-LcD" customClass="PNLineChartView">
                                 <rect key="frame" x="0.0" y="287" width="375" height="380"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
