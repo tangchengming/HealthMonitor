@@ -103,9 +103,9 @@
     
     [RequestManager httpPOST:Request_Method_BloodSugar parameters:params success:^(id responseObject) {
         
-        _DatasArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"]];
-        _collectdateArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"collectdate"]];
-        _bloodsugarArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"bloodsugar"]];
+        _DatasArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"]];
+        _collectdateArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"][@"collectdate"]];
+        _bloodsugarArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"][@"bloodsugar"]];
         
     } failure:^(NSError *error) {
         

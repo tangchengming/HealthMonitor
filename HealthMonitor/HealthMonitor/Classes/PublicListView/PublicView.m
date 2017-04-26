@@ -8,8 +8,7 @@
 
 #import "PublicView.h"
 
-@interface PublicView ()<UITableViewDelegate,UITableViewDataSource>
-
+@interface PublicView ()
 @end
 @implementation PublicView
 

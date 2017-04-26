@@ -25,7 +25,7 @@
 #define isTestHJ  1
 #if isTestHJ//1:测试环境  0：正式环境
 #define K_IP                    @"http://192.168.0.138:8080/"//外网--测试环境
-#define B_IP                    @"http://localhost:8080/"//外网--测试环境
+#define B_IP                    @"http://192.168.0.138:8080/"//外网--测试环境
 #define K_SERVICE       [NSString stringWithFormat:@"http://%@",K_IP]//
 #else
 #define K_IP                    @"http://962527.com.cn/"//正式测试环境
