@@ -27,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet PNLineChartView *lineChartView;
 
 
+
 @property (strong, nonatomic) NSMutableArray *DatasArr;//返回数据
 @property (strong, nonatomic) NSMutableArray *collectdateArr;//时间返回数据
 @property (strong, nonatomic) NSMutableArray *systolicpressureArr;//高压返回数据
@@ -94,20 +95,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.hLabel.text = @"高压/mmhg";
+    self.lLabel.text = @"低压/mmhg";
+    self.heLabel.text = @"心率/bpm";
+    
     [self setNetWorkData];
     
-    //取数组最后一个元素
-    //_heartLabel.text = [_systolicpressureArr objectAtIndex:_systolicpressureArr.count-1];
-    _heartLabel.text = @"000";
-    _hLabel.text = @"高压/mmhg";
     
-    //_lowLabel.text = [_diastolicpressureArr objectAtIndex:_diastolicpressureArr.count-1];
-    _lowLabel.text = @"000";
-    _lLabel.text = @"低压/mmhg";
     
-    //_heartLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
-    _heartLabel.text = @"000";
-    _heLabel.text = @"心率/bpm";
     
     [self lineChart];
 }
@@ -117,19 +112,54 @@
 - (void)setNetWorkData{
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"cardId"] = @"8e0de850";
-    params[@"member_id"] = @"25";
+    params[@"cardId"] = @"32200236";
+    params[@"member_id"] = @"55";
     
-    [RequestManager httpPOST:Request_Method_Fat parameters:params success:^(id responseObject) {
+    [RequestManager httpPOST:Request_Method_Blood_pressure parameters:params success:^(id responseObject) {
+        NSLog(@"爱立康数据：%@",responseObject);
+        _DatasArr = [BloodModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"]];
         
-        _DatasArr = [BloodModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"]];
-        
-        _collectdateArr = [BloodModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"collectdate"]];
-        _systolicpressureArr = [BloodModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"systolicpressure"]];
-        _diastolicpressureArr = [BloodModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"diastolicpressure"]];
-        _pulseArr = [BloodModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"pulse"]];
-        
-        
+        for (BloodModel *bloodModel in self.DatasArr) {
+            NSString *value = bloodModel.systolicpressure;
+            NSString *value1 = bloodModel.diastolicpressure;
+            NSString *value2 = bloodModel.collectdate;
+            NSString *value3 = bloodModel.pulse;
+            
+            [self.systolicpressureArr addObject:value];
+            [self.diastolicpressureArr addObject:value1];
+            [self.collectdateArr addObject:value2];
+            [self.pulseArr addObject:value3];
+            
+            NSLog(@"数组数据：%@",self.systolicpressureArr);
+            NSLog(@"数组数据：%@",self.diastolicpressureArr);
+            NSLog(@"数组数据：%@",self.pulseArr);
+            
+        }
+
+        if (self.collectdateArr.count == 0) {
+            
+            self.heartLabel.text = @"000";
+            
+            
+            self.lowLabel.text = @"000";
+            
+            
+            //_heartLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
+            self.heartLabel.text = @"000";
+            
+        }else{
+            
+            //取数组最后一个元素
+            self.heartLabel.text = [self.systolicpressureArr objectAtIndex:self.systolicpressureArr.count-1];
+            
+            
+            self.lowLabel.text = [self.diastolicpressureArr objectAtIndex:self.diastolicpressureArr.count-1];
+            
+            
+            self.heartLabel.text = [self.pulseArr objectAtIndex:self.pulseArr.count-1];
+            
+        }
+
         
         
     } failure:^(NSError *error) {
@@ -156,13 +186,14 @@
     }
     
     //横坐标
-    self.lineChartView.xAxisValues = _collectdateArr;
+    self.lineChartView.xAxisValues = self.collectdateArr;
     self.lineChartView.yAxisValues = yAxisValues;
     self.lineChartView.axisLeftLineWidth = 39;
     
     
     PNPlot *plot1 = [[PNPlot alloc] init];
-    plot1.plottingValues = _diastolicpressureArr;
+    plot1.plottingValues = self.diastolicpressureArr;
+    
     
     plot1.lineColor = [UIColor blueColor];
     plot1.lineWidth = 0.5;
@@ -172,9 +203,8 @@
     
     PNPlot *plot2 = [[PNPlot alloc] init];
     
-    plot2.plottingValues = _systolicpressureArr;
-    
-    plot2.lineColor = [UIColor redColor];
+    plot2.plottingValues = self.systolicpressureArr;
+       plot2.lineColor = [UIColor redColor];
     plot2.lineWidth = 1;
     
     [self.lineChartView  addPlot:plot2];

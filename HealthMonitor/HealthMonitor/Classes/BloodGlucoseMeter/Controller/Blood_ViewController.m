@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lowLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lLabel;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 
 @property (weak, nonatomic) IBOutlet PNLineChartView *lineChartView;
 
@@ -67,45 +68,98 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _hLabel.text = @"最高/mmol/l";
-    _lLabel.text = @"平均/mmol/l";
-    _aLabel.text = @"最低/mmol/l";
+    self.hLabel.text = @"最高/mmol/l";
+    self.lLabel.text = @"平均/mmol/l";
+    self.aLabel.text = @"最低/mmol/l";
     [self setNetWorkData];
+    self.segment.selectedSegmentIndex = 0;//默认第一个segment被选中
+    [self  lineChart];
     
-    
-    
-    if (_collectdateArr.count == 0) {
-        _highLabel.text = @"000";
-        _lowLabel.text = @"000";
-        _AverageLabel.text = @"000";
-    }else{
-        //CGFloat all_value = [[ary valueForKeyPath:@"@sum.floatValue"] floatValue];  //总和
-        CGFloat mid_value = [[_bloodsugarArr valueForKeyPath:@"@avg.floatValue"] floatValue];  //平均数
-        CGFloat max_value = [[_bloodsugarArr valueForKeyPath:@"@max.floatValue"] floatValue];  //最大值
-        CGFloat min_value = [[_bloodsugarArr valueForKeyPath:@"@min.floatValue"] floatValue];  //最小值
-        
-        _highLabel.text = [NSString stringWithFormat:@"%.2f",max_value];
-        _lowLabel.text = [NSString stringWithFormat:@"%.2f",min_value];
-        _AverageLabel.text = [NSString stringWithFormat:@"%.2f",mid_value];
+    [self.segment addTarget:self action:@selector(changesegment:) forControlEvents:UIControlEventValueChanged];//监听事件,当控件值改变时调用
 
-    }
     
-    [self lineChart];
+    
+    
+    
+    
     
 }
+
+-(void)changesegment:(UISegmentedControl *)segment{
+    
+    int Index = (int)self.segment.selectedSegmentIndex;
+    
+    switch (Index) {
+        case 0:
+            
+            //选中第一个segment
+            
+            [self lineChartView];
+            
+            break;
+            
+        case 1:
+            
+            
+            
+            //选中第二个segment
+            [self lineChartView];
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+
+
+
 
 //数据列表网络请求
 - (void)setNetWorkData{
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"cardId"] = @"8e0de850";
-    params[@"member_id"] = @"25";
+    params[@"cardId"] = @"32200236";
+    params[@"member_id"] = @"55";
     
     [RequestManager httpPOST:Request_Method_BloodSugar parameters:params success:^(id responseObject) {
         
+        
+        NSLog(@"血糖仪数据：%@",responseObject);
         _DatasArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"]];
-        _collectdateArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"][@"collectdate"]];
-        _bloodsugarArr = [BgmModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"][@"bloodsugar"]];
+        
+        
+        
+        for (BgmModel *bgmModel in self.DatasArr) {
+            NSString *value = bgmModel.bloodsugar;
+            
+            NSString *value1 = bgmModel.collectdate;
+            
+            [self.bloodsugarArr addObject:value];
+            
+            [self.collectdateArr addObject:value1];
+        }
+        
+        if (self.collectdateArr.count == 0) {
+            self.highLabel.text = @"000";
+            self.lowLabel.text = @"000";
+            self.AverageLabel.text = @"000";
+        }else{
+            //CGFloat all_value = [[ary valueForKeyPath:@"@sum.floatValue"] floatValue];  //总和
+            CGFloat mid_value = [[_bloodsugarArr valueForKeyPath:@"@avg.floatValue"] floatValue];  //平均数
+            CGFloat max_value = [[_bloodsugarArr valueForKeyPath:@"@max.floatValue"] floatValue];  //最大值
+            CGFloat min_value = [[_bloodsugarArr valueForKeyPath:@"@min.floatValue"] floatValue];  //最小值
+            
+            self.highLabel.text = [NSString stringWithFormat:@"%.2f",max_value];
+            self.lowLabel.text = [NSString stringWithFormat:@"%.2f",min_value];
+            self.AverageLabel.text = [NSString stringWithFormat:@"%.2f",mid_value];
+            
+        }
+
+        
+        
         
     } failure:^(NSError *error) {
         
@@ -131,13 +185,13 @@
     }
     
     //横坐标
-    self.lineChartView.xAxisValues = _collectdateArr;
+    self.lineChartView.xAxisValues = self.collectdateArr;
     self.lineChartView.yAxisValues = yAxisValues;
     self.lineChartView.axisLeftLineWidth = 39;
     
     
     PNPlot *plot1 = [[PNPlot alloc] init];
-    plot1.plottingValues = _bloodsugarArr;
+    plot1.plottingValues = self.bloodsugarArr;
     
     plot1.lineColor = [UIColor blueColor];
     plot1.lineWidth = 0.5;

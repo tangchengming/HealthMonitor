@@ -12,18 +12,16 @@
 @interface FatMonitorViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *UserView;
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
-@property (weak, nonatomic) IBOutlet UIButton *ChartBtn;//折线按钮
-@property (weak, nonatomic) IBOutlet UIButton *ListBtn;//列表按钮
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment1;//折线列表
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment2;//脂肪，体质，基础
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment3;//周 月
+
 @property (weak, nonatomic) IBOutlet UIView *XzView;
-@property (weak, nonatomic) IBOutlet UIButton *FatBtn;//脂肪含量btn
-@property (weak, nonatomic) IBOutlet UIButton *BmiBtn;//体质指数btn
-@property (weak, nonatomic) IBOutlet UIButton *BmrBtn;//基础代谢btn
-@property (weak, nonatomic) IBOutlet UIButton *weekBtn;//周
-@property (weak, nonatomic) IBOutlet UIButton *MonthBtn;//月
+
 @property (strong, nonatomic) IBOutlet PNLineChartView *lineChartView;
 
 @property (strong, nonatomic) UITableView *ListTableView;
-
+//@property (strong, nonatomic) PNLineChartView *lineChartView1;
 
 @property (strong, nonatomic) NSMutableArray *DatasArr;//返回数据
 @property (strong, nonatomic) NSMutableArray *collectdateArr;//检测时间
@@ -98,24 +96,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self loadcenterView];
     
-    [self setNetWorkData];
+   // [self setNetWorkData];
+    
 }
 
 //数据列表网络请求
 - (void)setNetWorkData{
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"cardId"] = @"8e0de850";
-    params[@"member_id"] = @"25";
+    params[@"cardId"] = @"32200236";
+    params[@"member_id"] = @"55";
     
     [RequestManager httpPOST:Request_Method_Fat parameters:params success:^(id responseObject) {
+        NSLog(@"脂肪仪数据：%@",responseObject);
+        self.DatasArr = [FatMonitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"]];
         
-        _DatasArr = [FatMonitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"]];
-        _collectdateArr = [FatMonitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"collectdate"]];
-        _fatcontentArr = [FatMonitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"fatcontent"]];
-        _bmiArr = [FatMonitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"bmi"]];
-        _bmrArr = [FatMonitorModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"bmr"]];
+        
+       
+        for (FatMonitorModel *fatModel in self.DatasArr) {
+            NSString *value = fatModel.bmi;
+            NSString *value1 = fatModel.bmr;
+            NSString *value2 = fatModel.collectdate;
+            
+            [self.bmiArr addObject:value];
+            [self.bmrArr addObject:value1];
+            [self.collectdateArr addObject:value2];
+        }
         
         [self.ListTableView reloadData];//刷新
     } failure:^(NSError *error) {
@@ -125,25 +133,139 @@
 }
 
 
-//折线
-- (IBAction)ChartButton:(UIButton *)sender {
+-(void)loadcenterView{
+    
+    _segment1.selectedSegmentIndex = 0;//默认第一个segment被选中
+    [self FatLine];
+    _segment2.selectedSegmentIndex = 0;
+    _segment3.selectedSegmentIndex = 0;
+    
+    [_segment1 addTarget:self action:@selector(changesegment1:) forControlEvents:UIControlEventValueChanged];//监听事件,当控件值改变时调用
+    [_segment2 addTarget:self action:@selector(changesegment2:) forControlEvents:UIControlEventValueChanged];//监听事件,当控件值改变时调用
+    [_segment3 addTarget:self action:@selector(changesegment3:) forControlEvents:UIControlEventValueChanged];//监听事件,当控件值改变时调用
+
 }
 
-//列表
-- (IBAction)ListButton:(UIButton *)sender {
+
+
+
+
+-(void)changesegment1:(UISegmentedControl *)segment{
+
+    int Index = (int)_segment1.selectedSegmentIndex;
     
-    [self TableView];
-    [self setNetWorkData];
-    
-    
+    switch (Index) {
+        case 0:
+            
+            self.XzView.hidden = NO;
+            self.lineChartView.hidden = NO;
+            self.ListTableView.hidden = YES;
+            
+            //选中第一个segment
+            [self XzView];
+            [self lineChartView];
+            
+            break;
+         
+        case 1:
+            
+            self.XzView.hidden = YES;
+            self.lineChartView.hidden = YES;
+            self.ListTableView.hidden = NO;
+            
+            //选中第二个segment
+            [self ListTableView];
+            [self TableView];
+            [self setNetWorkData];
+            break;
+        
+        default:
+            break;
+    }
+
 }
+
+-(void)changesegment2:(UISegmentedControl *)segment{
+    
+    int Index = (int)_segment2.selectedSegmentIndex;
+    
+    switch (Index) {
+        case 0:
+            
+           
+            
+            //选中第一个segment
+            
+            [self lineChartView];
+            [self FatLine];
+            break;
+            
+        case 1:
+            
+            
+            
+            //选中第二个segment
+            [self lineChartView];
+            [self  BmiLine];
+            break;
+           
+        case 2:
+            
+            
+            
+            //选中第三个segment
+            [self lineChartView];
+            [self BmrLine];
+            break;
+            
+        default:
+            break;
+    }
+
+
+
+}
+
+-(void)changesegment3:(UISegmentedControl *)segment{
+    
+    int Index = (int)_segment1.selectedSegmentIndex;
+    
+    switch (Index) {
+        case 0:
+            
+           
+            
+            //选中第一个segment
+            
+            [self lineChartView];
+            
+            break;
+            
+        case 1:
+            
+            
+            
+            //选中第二个segment
+            [self lineChartView];
+            
+            break;
+            
+        default:
+            break;
+    }
+
+
+}
+
+
+
 
 - (void)TableView{
     
-    _ListTableView = [[UITableView alloc] init];
+    self.ListTableView = [[UITableView alloc] init];
     [self.view addSubview:_ListTableView];
-       [_ListTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_XzView).with.offset(0);
+       [self.ListTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.XzView).with.offset(0);
         make.left.right.equalTo(@0);
         
         make.bottom.equalTo(@0);
@@ -151,11 +273,11 @@
     }];
     
     
-    _ListTableView.delegate = self;
-    _ListTableView.dataSource = self;
-    
+    self.ListTableView.delegate = self;
+    self.ListTableView.dataSource = self;
+    self.ListTableView.tableFooterView = [UIView new];
     //注册cell
-    [_ListTableView registerNib:[UINib nibWithNibName:@"ListTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
+    [self.ListTableView registerNib:[UINib nibWithNibName:@"ListTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
 }
 
 #pragma make ++  tableview
@@ -183,7 +305,17 @@
     FatMonitorModel *fatModel = self.DatasArr[indexPath.item];
     
     ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.collectdateLabel.text = fatModel.collectdate;
+    
+    for (FatMonitorModel *fatModel in self.DatasArr) {
+        
+        NSString *value2 = fatModel.collectdate;
+        NSString *b = [value2 substringFromIndex:5];
+        NSLog(@"时间：%@",b);
+        cell.collectdateLabel.text = b;
+    }
+    
+    
+    
     cell.bodytypeLabel.text = fatModel.bodytype;
     cell.fatcontentLabel.text = fatModel.fatcontent;
     cell.fatLabel.text = @"脂肪含量";
@@ -199,7 +331,7 @@
 
 
 //脂肪含量
-- (IBAction)FatButton:(UIButton *)sender {
+- (void)FatLine{
     
     self.lineChartView.max = 50;
     self.lineChartView.min = 10;
@@ -221,7 +353,7 @@
     NSArray* plottingDataValues1 =@[@12, @20, @25, @18,@33, @45,@22, @33, @54,@15, @43];//蓝色
     
     
-
+    
     self.lineChartView.yAxisValues = yAxisValues;
     self.lineChartView.axisLeftLineWidth = 39;
     
@@ -235,10 +367,9 @@
     [self.lineChartView addPlot:plot1];
     
 }
-
 //体质指数
-- (IBAction)BmiButton:(UIButton *)sender {
-    
+- (void)BmiLine{
+
     self.lineChartView.max = 30;
     self.lineChartView.min = 10;
     self.lineChartView.interval = 5;
@@ -256,7 +387,7 @@
     
     //值
     // test line chart
-    NSArray* plottingDataValues1 =@[@12, @20, @25, @18,@33, @45,@22, @33, @54,@15, @43];//蓝色
+    NSArray* plottingDataValues1 =@[@12, @20, @25, @18,@23, @25,@22, @13, @24,@15, @13];//蓝色
     
     
     
@@ -271,12 +402,11 @@
     plot1.lineWidth = 1;
     
     [self.lineChartView addPlot:plot1];
-    
+
 }
 
 //基础代谢
-- (IBAction)BmrButton:(UIButton *)sender {
-    
+- (void)BmrLine{
     self.lineChartView.max = 2000;
     self.lineChartView.min = 800;
     self.lineChartView.interval = 300;
@@ -309,15 +439,18 @@
     plot1.lineWidth = 1;
     
     [self.lineChartView addPlot:plot1];
-    
+
 }
 
 //周
-- (IBAction)WeekButton:(UIButton *)sender {
+- (void)WeekLine{
+    
 }
 
 //月
-- (IBAction)MonthButton:(UIButton *)sender {
+- (void)MonthLine{
+
+    
 }
 
 //用户

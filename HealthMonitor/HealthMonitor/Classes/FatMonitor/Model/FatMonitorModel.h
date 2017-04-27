@@ -10,7 +10,7 @@
 
 @interface FatMonitorModel : NSObject
 
-@property (nonatomic, strong) NSArray *Datas;//返回数据信息列表
+
 
 
 

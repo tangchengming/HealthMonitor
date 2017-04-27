@@ -74,10 +74,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVg-hd-n2X">
-                                <rect key="frame" x="0.0" y="84" width="375" height="133.5"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="167"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成员名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otP-UA-CJ3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="20" width="375" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="j6L-ty-FEj"/>
@@ -86,155 +86,72 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqZ-Gt-h7F">
-                                        <rect key="frame" x="335" y="93.5" width="30" height="30"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6hB-i6-Efx">
+                                        <rect key="frame" x="255" y="129" width="110" height="29"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Os5-Zf-VWM"/>
-                                            <constraint firstAttribute="width" constant="30" id="zjd-gK-d9l"/>
+                                            <constraint firstAttribute="width" constant="110" id="o6K-Yg-XR1"/>
                                         </constraints>
-                                        <state key="normal" image="list_gray"/>
-                                        <connections>
-                                            <action selector="ListButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="KWB-gL-Gqx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWJ-ey-Lkl">
-                                        <rect key="frame" x="295" y="93.5" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="H5M-Si-rfo"/>
-                                            <constraint firstAttribute="width" constant="30" id="ecK-Eo-LG4"/>
-                                        </constraints>
-                                        <state key="normal" image="curve_greem"/>
-                                        <connections>
-                                            <action selector="ChartButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="Wat-lq-6f8"/>
-                                        </connections>
-                                    </button>
+                                        <segments>
+                                            <segment title="" image="curve_greem"/>
+                                            <segment title="" image="list_gray"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.94928175209999999" green="0.47166228290000001" blue="0.0042740604840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="jWJ-ey-Lkl" secondAttribute="bottom" constant="10" id="EWz-SJ-y9a"/>
+                                    <constraint firstAttribute="trailing" secondItem="6hB-i6-Efx" secondAttribute="trailing" constant="10" id="6sM-00-DA1"/>
                                     <constraint firstItem="otP-UA-CJ3" firstAttribute="leading" secondItem="ZVg-hd-n2X" secondAttribute="leading" id="H7g-wM-QxO"/>
-                                    <constraint firstItem="EqZ-Gt-h7F" firstAttribute="leading" secondItem="jWJ-ey-Lkl" secondAttribute="trailing" constant="10" id="NhK-UF-djb"/>
-                                    <constraint firstAttribute="bottom" secondItem="EqZ-Gt-h7F" secondAttribute="bottom" constant="10" id="dML-pK-n2g"/>
+                                    <constraint firstAttribute="bottom" secondItem="6hB-i6-Efx" secondAttribute="bottom" constant="10" id="gnO-9y-THE"/>
                                     <constraint firstAttribute="trailing" secondItem="otP-UA-CJ3" secondAttribute="trailing" id="hm6-PG-UFk"/>
-                                    <constraint firstItem="otP-UA-CJ3" firstAttribute="top" secondItem="ZVg-hd-n2X" secondAttribute="top" id="uyT-l6-fPS"/>
-                                    <constraint firstAttribute="trailing" secondItem="EqZ-Gt-h7F" secondAttribute="trailing" constant="10" id="zVx-vr-LXm"/>
+                                    <constraint firstItem="otP-UA-CJ3" firstAttribute="top" secondItem="ZVg-hd-n2X" secondAttribute="top" constant="20" id="uyT-l6-fPS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YME-P4-KAX">
-                                <rect key="frame" x="0.0" y="217.5" width="375" height="449.5"/>
+                                <rect key="frame" x="0.0" y="251" width="375" height="416"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-eM-0oF">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zc0-g8-KyZ">
-                                                <rect key="frame" x="10" y="1" width="60" height="28"/>
-                                                <color key="backgroundColor" red="0.94928175209999999" green="0.47166228290000001" blue="0.0042740604840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-8n-IsS">
+                                                <rect key="frame" x="235" y="76" width="130" height="29"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="54C-qW-fk8"/>
+                                                    <constraint firstAttribute="width" constant="130" id="NSk-2W-9Q9"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="脂肪含量">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="time_d"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="FatButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="cfT-fM-pbs"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqL-Qt-lPR">
-                                                <rect key="frame" x="75" y="1" width="60" height="28"/>
-                                                <color key="backgroundColor" red="0.35560742020000002" green="0.81530803439999999" blue="0.86326771970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="7TO-B1-oaT"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="体质指数">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="BmiButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="gjB-Kw-Lcy"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz9-dz-xaI">
-                                                <rect key="frame" x="140" y="1" width="70" height="28"/>
-                                                <color key="backgroundColor" red="0.35560742020000002" green="0.81530803439999999" blue="0.86326771970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="WBm-U0-W4r"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="基础代谢值">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="BmrButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="YyU-ZQ-cfa"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gX-WL-g5g">
-                                                <rect key="frame" x="275" y="0.0" width="40" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="SUf-5y-ZYE"/>
-                                                </constraints>
-                                                <state key="normal" title="周" backgroundImage="time_d">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="WeekButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="f0t-65-zrV"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-9x-Aff">
-                                                <rect key="frame" x="325" y="0.0" width="40" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="3dO-3w-gOP"/>
-                                                </constraints>
-                                                <state key="normal" title="月" backgroundImage="time_no">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" title="周"/>
-                                                <connections>
-                                                    <action selector="MonthButton:" destination="sZz-pE-xpn" eventType="touchUpInside" id="Hhb-lx-Uoi"/>
-                                                </connections>
-                                            </button>
+                                                <segments>
+                                                    <segment title="周"/>
+                                                    <segment title="月"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.15898460149999999" green="0.78197592500000002" blue="0.1288363934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="47J-NO-w1J">
+                                                <rect key="frame" x="20" y="10" width="335" height="29"/>
+                                                <segments>
+                                                    <segment title="脂肪含量"/>
+                                                    <segment title="体质指数"/>
+                                                    <segment title="基础代谢值"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.94928175209999999" green="0.47166228290000001" blue="0.0042740604840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </segmentedControl>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="wmt-9x-Aff" secondAttribute="trailing" constant="10" id="AJm-5J-Jad"/>
-                                            <constraint firstItem="aqL-Qt-lPR" firstAttribute="centerY" secondItem="Pzs-eM-0oF" secondAttribute="centerY" id="Cni-ki-oCI"/>
-                                            <constraint firstItem="8gX-WL-g5g" firstAttribute="top" secondItem="Pzs-eM-0oF" secondAttribute="top" id="FQZ-JY-LUC"/>
-                                            <constraint firstItem="aqL-Qt-lPR" firstAttribute="leading" secondItem="Zc0-g8-KyZ" secondAttribute="trailing" constant="5" id="IdY-iF-onJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="8gX-WL-g5g" secondAttribute="bottom" id="JVm-1a-KoY"/>
-                                            <constraint firstAttribute="bottom" secondItem="wmt-9x-Aff" secondAttribute="bottom" id="NP1-mf-bI0"/>
-                                            <constraint firstItem="uz9-dz-xaI" firstAttribute="leading" secondItem="aqL-Qt-lPR" secondAttribute="trailing" constant="5" id="Qky-N4-Gfp"/>
-                                            <constraint firstItem="Zc0-g8-KyZ" firstAttribute="leading" secondItem="Pzs-eM-0oF" secondAttribute="leading" constant="10" id="UMp-cl-u4K"/>
-                                            <constraint firstItem="uz9-dz-xaI" firstAttribute="centerY" secondItem="Pzs-eM-0oF" secondAttribute="centerY" id="bgC-9I-6SH"/>
-                                            <constraint firstItem="wmt-9x-Aff" firstAttribute="leading" secondItem="8gX-WL-g5g" secondAttribute="trailing" constant="10" id="eBu-wd-PzT"/>
-                                            <constraint firstAttribute="height" constant="30" id="iKa-mS-h49"/>
-                                            <constraint firstItem="wmt-9x-Aff" firstAttribute="top" secondItem="Pzs-eM-0oF" secondAttribute="top" id="rA0-kQ-kMp"/>
-                                            <constraint firstItem="Zc0-g8-KyZ" firstAttribute="centerY" secondItem="Pzs-eM-0oF" secondAttribute="centerY" id="yOZ-Rd-2ZR"/>
+                                            <constraint firstItem="47J-NO-w1J" firstAttribute="leading" secondItem="Pzs-eM-0oF" secondAttribute="leading" constant="20" id="7X9-2Q-qSm"/>
+                                            <constraint firstAttribute="trailing" secondItem="47J-NO-w1J" secondAttribute="trailing" constant="20" id="JQb-Rp-PSc"/>
+                                            <constraint firstAttribute="bottom" secondItem="bTa-8n-IsS" secondAttribute="bottom" id="MS7-DM-LS3"/>
+                                            <constraint firstAttribute="trailing" secondItem="bTa-8n-IsS" secondAttribute="trailing" constant="10" id="W7v-n7-apZ"/>
+                                            <constraint firstItem="47J-NO-w1J" firstAttribute="top" secondItem="Pzs-eM-0oF" secondAttribute="top" constant="10" id="j9b-Sy-6cg"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqC-14-Pnz" customClass="PNLineChartView">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="409.5"/>
+                                        <rect key="frame" x="0.0" y="114" width="375" height="302"/>
                                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="SqC-14-Pnz" secondAttribute="trailing" id="7hP-fx-3wa"/>
+                                    <constraint firstItem="Pzs-eM-0oF" firstAttribute="height" secondItem="YME-P4-KAX" secondAttribute="height" multiplier="1:4" id="D9e-Dq-0fz"/>
                                     <constraint firstItem="SqC-14-Pnz" firstAttribute="leading" secondItem="YME-P4-KAX" secondAttribute="leading" id="LE4-6b-rie"/>
                                     <constraint firstItem="SqC-14-Pnz" firstAttribute="top" secondItem="Pzs-eM-0oF" secondAttribute="bottom" constant="10" id="iRz-8T-e7t"/>
                                     <constraint firstAttribute="trailing" secondItem="Pzs-eM-0oF" secondAttribute="trailing" id="sdh-Nf-4d3"/>
@@ -253,29 +170,25 @@
                             <constraint firstItem="YME-P4-KAX" firstAttribute="leading" secondItem="Lxx-P3-INI" secondAttribute="leading" id="RrE-dO-kT3"/>
                             <constraint firstAttribute="trailing" secondItem="ZVg-hd-n2X" secondAttribute="trailing" id="TYw-t2-Jnk"/>
                             <constraint firstItem="L3i-lX-J4Y" firstAttribute="top" secondItem="Lxx-P3-INI" secondAttribute="top" id="Y8L-Ww-kbQ"/>
-                            <constraint firstItem="ZVg-hd-n2X" firstAttribute="height" secondItem="Lxx-P3-INI" secondAttribute="height" multiplier="1:5" id="tgy-Zk-TYm"/>
+                            <constraint firstItem="ZVg-hd-n2X" firstAttribute="height" secondItem="Lxx-P3-INI" secondAttribute="height" multiplier="1:4" id="tgy-Zk-TYm"/>
                             <constraint firstItem="ZVg-hd-n2X" firstAttribute="leading" secondItem="Lxx-P3-INI" secondAttribute="leading" id="y1f-gx-x4B"/>
                             <constraint firstItem="YME-P4-KAX" firstAttribute="top" secondItem="ZVg-hd-n2X" secondAttribute="bottom" id="yAA-XS-eIC"/>
                             <constraint firstItem="KJy-nH-pIg" firstAttribute="top" secondItem="YME-P4-KAX" secondAttribute="bottom" id="yyW-Ez-xyi"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BmiBtn" destination="aqL-Qt-lPR" id="EGR-jY-Bme"/>
-                        <outlet property="BmrBtn" destination="uz9-dz-xaI" id="eaU-bf-WMK"/>
-                        <outlet property="ChartBtn" destination="jWJ-ey-Lkl" id="22t-XK-uiI"/>
-                        <outlet property="FatBtn" destination="Zc0-g8-KyZ" id="Qbf-ry-F83"/>
-                        <outlet property="ListBtn" destination="EqZ-Gt-h7F" id="RAC-pT-OQ7"/>
-                        <outlet property="MonthBtn" destination="wmt-9x-Aff" id="kTw-cn-mVB"/>
                         <outlet property="NameLabel" destination="otP-UA-CJ3" id="8bv-RP-1cT"/>
                         <outlet property="UserView" destination="ZVg-hd-n2X" id="z2E-cw-LbK"/>
                         <outlet property="XzView" destination="Pzs-eM-0oF" id="B9h-e8-SU8"/>
                         <outlet property="lineChartView" destination="SqC-14-Pnz" id="gmK-cs-azL"/>
-                        <outlet property="weekBtn" destination="8gX-WL-g5g" id="ReN-D8-u8X"/>
+                        <outlet property="segment1" destination="6hB-i6-Efx" id="gr0-uG-vLl"/>
+                        <outlet property="segment2" destination="47J-NO-w1J" id="aow-vj-O17"/>
+                        <outlet property="segment3" destination="bTa-8n-IsS" id="eKb-xS-D0J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtn-6h-dyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="94"/>
+            <point key="canvasLocation" x="32.799999999999997" y="93.103448275862078"/>
         </scene>
     </scenes>
     <resources>
@@ -283,8 +196,6 @@
         <image name="bar" width="720" height="96"/>
         <image name="curve_greem" width="44" height="44"/>
         <image name="list_gray" width="44" height="44"/>
-        <image name="time_d" width="100" height="61"/>
-        <image name="time_no" width="100" height="61"/>
         <image name="user_fat" width="48" height="48"/>
     </resources>
 </document>

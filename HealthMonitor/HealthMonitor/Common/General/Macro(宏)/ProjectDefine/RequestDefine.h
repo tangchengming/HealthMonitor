@@ -73,7 +73,7 @@
 
 #define Request_Method_Weight                        @"health/app/queryWeightApp"    //体重数据
 
-
+#define Request_Method_PulseMeter                    @"health/app/queryOxygenApp"
 
 
 

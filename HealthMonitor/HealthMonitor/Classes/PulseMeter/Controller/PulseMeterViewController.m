@@ -10,11 +10,11 @@
 #import "PulseMeterModel.h"
 @interface PulseMeterViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;//名称
-@property (weak, nonatomic) IBOutlet UIButton *weekBtn;//周
-@property (weak, nonatomic) IBOutlet UIButton *MonthBtn;//月
+
 @property (weak, nonatomic) IBOutlet UILabel *pulseLabel;//脉搏
 @property (weak, nonatomic) IBOutlet UILabel *oxygenLabel;//血氧
 @property (strong, nonatomic) IBOutlet PNLineChartView *lineChartView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 
 
 @property (strong, nonatomic) NSMutableArray *DatasArr;//返回数据
@@ -76,28 +76,91 @@
     
     //取数组最后一个元素
     //_pulseLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
-    _pulseLabel.text = @"000";
+    self.pulseLabel.text = @"000";
     //_oxygenLabel.text = [_oxygenArr objectAtIndex:_oxygenArr.count-1];
-    _oxygenLabel.text = @"000";
+    self.oxygenLabel.text = @"000";
     
-    [self lineChart];
+    [self loadcenterView];
     
 }
+
+
+-(void)loadcenterView{
+    
+    self.segment.selectedSegmentIndex = 0;//默认第一个segment被选中
+    [self  lineChart];
+    
+    [self.segment addTarget:self action:@selector(changesegment:) forControlEvents:UIControlEventValueChanged];//监听事件,当控件值改变时调用
+    
+}
+
+
+-(void)changesegment:(UISegmentedControl *)segment{
+    
+    int Index = (int)self.segment.selectedSegmentIndex;
+    
+    switch (Index) {
+        case 0:
+            
+            //选中第一个segment
+            
+            [self lineChartView];
+            
+            break;
+            
+        case 1:
+            
+           
+            
+            //选中第二个segment
+            [self lineChartView];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
 
 
 //数据列表网络请求
 - (void)setNetWorkData{
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"cardId"] = @"8e0de850";
-    params[@"member_id"] = @"25";
+    params[@"cardId"] = @"32200236";
+    params[@"member_id"] = @"55";
     
-    [RequestManager httpPOST:Request_Method_Fat parameters:params success:^(id responseObject) {
+    [RequestManager httpPOST:Request_Method_PulseMeter parameters:params success:^(id responseObject) {
         
-        _DatasArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"]];
-        _collectdateArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"collectdate"]];
-        _pulseArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"pulse"]];
-        _oxygenArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"Datas"][@"oxygen"]];
+        self.DatasArr = [PulseMeterModel mj_objectArrayWithKeyValuesArray:responseObject[@"listBlood_pressure"]];
+        NSLog(@"脉搏仪数据：%@",responseObject);
+        
+        for (PulseMeterModel *pulseModel in self.DatasArr) {
+            NSString *value = pulseModel.pulse;
+            NSString *value1 = pulseModel.oxygen;
+            NSString *value2 = pulseModel.collectdate;
+            
+            [self.pulseArr addObject:value];
+            [self.oxygenArr addObject:value1];
+            [self.collectdateArr addObject:value2];
+        }
+
+        if (self.pulseArr == 0) {
+            
+            //取数组最后一个元素
+            //_pulseLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
+            self.pulseLabel.text = @"000";
+            //_oxygenLabel.text = [_oxygenArr objectAtIndex:_oxygenArr.count-1];
+            self.oxygenLabel.text = @"000";
+
+        }else{
+        
+             self.pulseLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
+            
+            self.oxygenLabel.text = [_oxygenArr objectAtIndex:_oxygenArr.count-1];
+
+        }
        
     } failure:^(NSError *error) {
         
@@ -148,14 +211,7 @@
 }
 
 
-- (IBAction)WeekButton:(UIButton *)sender {
-    
-    
-}
 
-
-- (IBAction)MonthButton:(UIButton *)sender {
-}
 
 
 - (IBAction)UserBtn:(UIButton *)sender {

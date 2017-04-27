@@ -10,7 +10,7 @@
 
 @interface PulseMeterModel : NSObject
 
-@property (nonatomic, strong) NSArray *Datas;//返回数据信息列表
+
 
 
 /** 检测时间 */

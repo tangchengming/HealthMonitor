@@ -45,6 +45,9 @@
 		2B6FA4AB1E9E04A90035281D /* BGM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6FA4AA1E9E04A90035281D /* BGM.storyboard */; };
 		2B6FA4B21E9E300F0035281D /* PublicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FA4B11E9E300F0035281D /* PublicView.m */; };
 		2B6FA4B41E9E30350035281D /* PublicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6FA4B31E9E30350035281D /* PublicView.xib */; };
+		2B7078F11EB2173D00D1EA67 /* MenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7078EF1EB2173D00D1EA67 /* MenuCollectionViewCell.m */; };
+		2B7078F21EB2173D00D1EA67 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7078F01EB2173D00D1EA67 /* MenuCollectionViewCell.xib */; };
+		2B7078F51EB2196A00D1EA67 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7078F41EB2196A00D1EA67 /* HomeController.m */; };
 		2B793A361EA738C300FFEECB /* BloodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B793A351EA738C300FFEECB /* BloodModel.m */; };
 		2B7B119D1E9F266800951E37 /* BPM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B119C1E9F266800951E37 /* BPM.storyboard */; };
 		2B7B11A01E9F4C7200951E37 /* MeasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */; };
@@ -170,6 +173,11 @@
 		2B6FA4B01E9E300F0035281D /* PublicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicView.h; sourceTree = "<group>"; };
 		2B6FA4B11E9E300F0035281D /* PublicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicView.m; sourceTree = "<group>"; };
 		2B6FA4B31E9E30350035281D /* PublicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicView.xib; sourceTree = "<group>"; };
+		2B7078EE1EB2173D00D1EA67 /* MenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCollectionViewCell.h; sourceTree = "<group>"; };
+		2B7078EF1EB2173D00D1EA67 /* MenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCollectionViewCell.m; sourceTree = "<group>"; };
+		2B7078F01EB2173D00D1EA67 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		2B7078F31EB2196A00D1EA67 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		2B7078F41EB2196A00D1EA67 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		2B793A341EA738C300FFEECB /* BloodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloodModel.h; sourceTree = "<group>"; };
 		2B793A351EA738C300FFEECB /* BloodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloodModel.m; sourceTree = "<group>"; };
 		2B7B119C1E9F266800951E37 /* BPM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BPM.storyboard; sourceTree = "<group>"; };
@@ -398,6 +406,8 @@
 			children = (
 				2B64A3BB1E9C7F6D005E93BD /* HomeViewController.h */,
 				2B64A3BC1E9C7F6D005E93BD /* HomeViewController.m */,
+				2B7078F31EB2196A00D1EA67 /* HomeController.h */,
+				2B7078F41EB2196A00D1EA67 /* HomeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -412,6 +422,9 @@
 		2B64A3BE1E9C7F6D005E93BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B7078EE1EB2173D00D1EA67 /* MenuCollectionViewCell.h */,
+				2B7078EF1EB2173D00D1EA67 /* MenuCollectionViewCell.m */,
+				2B7078F01EB2173D00D1EA67 /* MenuCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1066,6 +1079,7 @@
 				2B6FA4B41E9E30350035281D /* PublicView.xib in Resources */,
 				2B64A4051E9CC7AD005E93BD /* ListTableViewCell.xib in Resources */,
 				2BC32B861E8DFCBA00020BFE /* Assets.xcassets in Resources */,
+				2B7078F21EB2173D00D1EA67 /* MenuCollectionViewCell.xib in Resources */,
 				2B64A3F21E9C849C005E93BD /* Alk.storyboard in Resources */,
 				2B6FA4AB1E9E04A90035281D /* BGM.storyboard in Resources */,
 				2B7B119D1E9F266800951E37 /* BPM.storyboard in Resources */,
@@ -1179,6 +1193,8 @@
 				2B64A3EC1E9C80E1005E93BD /* NewUserViewController.m in Sources */,
 				2BC32B7B1E8DFCBA00020BFE /* main.m in Sources */,
 				2B6FA4B21E9E300F0035281D /* PublicView.m in Sources */,
+				2B7078F11EB2173D00D1EA67 /* MenuCollectionViewCell.m in Sources */,
+				2B7078F51EB2196A00D1EA67 /* HomeController.m in Sources */,
 				2B66DA861EA0CF49005A41C3 /* HistoryRecordViewController.m in Sources */,
 				2B7B11A31E9F4CAE00951E37 /* StatisticsViewController.m in Sources */,
 				2B6EFBAE1EA88B230058FE28 /* PulseMeterModel.m in Sources */,
