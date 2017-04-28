@@ -52,6 +52,12 @@
 		2B7B119D1E9F266800951E37 /* BPM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B119C1E9F266800951E37 /* BPM.storyboard */; };
 		2B7B11A01E9F4C7200951E37 /* MeasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */; };
 		2B7B11A31E9F4CAE00951E37 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B11A21E9F4CAE00951E37 /* StatisticsViewController.m */; };
+		2B7B3E0C1EB2EF7C008CB7FA /* One.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B3E0B1EB2EF7C008CB7FA /* One.storyboard */; };
+		2B7B3E0F1EB2EFA3008CB7FA /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B3E0E1EB2EFA3008CB7FA /* OneViewController.m */; };
+		2B7B3E121EB2F010008CB7FA /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B3E111EB2F010008CB7FA /* ListViewController.m */; };
+		2B7B3E161EB30F43008CB7FA /* OneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B3E141EB30F43008CB7FA /* OneTableViewCell.m */; };
+		2B7B3E171EB30F43008CB7FA /* OneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B3E151EB30F43008CB7FA /* OneTableViewCell.xib */; };
+		2B7B3E1A1EB334FF008CB7FA /* OneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B3E191EB334FF008CB7FA /* OneModel.m */; };
 		2B7BFC5A1EA45AEE00D73C01 /* Pulse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7BFC591EA45AEE00D73C01 /* Pulse.storyboard */; };
 		2B7BFC5D1EA493D500D73C01 /* PulseMeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BFC5C1EA493D500D73C01 /* PulseMeterViewController.m */; };
 		2B7BFC601EA4941B00D73C01 /* FatMonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BFC5F1EA4941B00D73C01 /* FatMonitorViewController.m */; };
@@ -185,6 +191,16 @@
 		2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureViewController.m; sourceTree = "<group>"; };
 		2B7B11A11E9F4CAE00951E37 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		2B7B11A21E9F4CAE00951E37 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		2B7B3E0B1EB2EF7C008CB7FA /* One.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = One.storyboard; sourceTree = "<group>"; };
+		2B7B3E0D1EB2EFA3008CB7FA /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		2B7B3E0E1EB2EFA3008CB7FA /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		2B7B3E101EB2F010008CB7FA /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		2B7B3E111EB2F010008CB7FA /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		2B7B3E131EB30F42008CB7FA /* OneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneTableViewCell.h; sourceTree = "<group>"; };
+		2B7B3E141EB30F43008CB7FA /* OneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneTableViewCell.m; sourceTree = "<group>"; };
+		2B7B3E151EB30F43008CB7FA /* OneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneTableViewCell.xib; sourceTree = "<group>"; };
+		2B7B3E181EB334FF008CB7FA /* OneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneModel.h; sourceTree = "<group>"; };
+		2B7B3E191EB334FF008CB7FA /* OneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneModel.m; sourceTree = "<group>"; };
 		2B7BFC591EA45AEE00D73C01 /* Pulse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pulse.storyboard; sourceTree = "<group>"; };
 		2B7BFC5B1EA493D500D73C01 /* PulseMeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseMeterViewController.h; sourceTree = "<group>"; };
 		2B7BFC5C1EA493D500D73C01 /* PulseMeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseMeterViewController.m; sourceTree = "<group>"; };
@@ -384,9 +400,10 @@
 				2B6FA4A61E9E042A0035281D /* PulseMeter */,
 				2B64A3ED1E9C841D005E93BD /* AlkBloodGlucoseMeter */,
 				2B64A3F61E9CAB9E005E93BD /* FatMonitor */,
-				2B64A3C91E9C7F6D005E93BD /* Storyboard */,
 				2B7C91201EA9F01800F91418 /* ECG */,
+				2B7B3E071EB2EB66008CB7FA /* IntegratedMachine */,
 				2B6FA4AF1E9E2F8B0035281D /* PublicListView */,
+				2B64A3C91E9C7F6D005E93BD /* Storyboard */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -830,6 +847,47 @@
 			path = PublicListView;
 			sourceTree = "<group>";
 		};
+		2B7B3E071EB2EB66008CB7FA /* IntegratedMachine */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B3E081EB2EF47008CB7FA /* Controller */,
+				2B7B3E091EB2EF47008CB7FA /* Model */,
+				2B7B3E0A1EB2EF47008CB7FA /* View */,
+				2B7B3E0B1EB2EF7C008CB7FA /* One.storyboard */,
+			);
+			path = IntegratedMachine;
+			sourceTree = "<group>";
+		};
+		2B7B3E081EB2EF47008CB7FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B3E0D1EB2EFA3008CB7FA /* OneViewController.h */,
+				2B7B3E0E1EB2EFA3008CB7FA /* OneViewController.m */,
+				2B7B3E101EB2F010008CB7FA /* ListViewController.h */,
+				2B7B3E111EB2F010008CB7FA /* ListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B7B3E091EB2EF47008CB7FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B3E181EB334FF008CB7FA /* OneModel.h */,
+				2B7B3E191EB334FF008CB7FA /* OneModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B7B3E0A1EB2EF47008CB7FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B7B3E131EB30F42008CB7FA /* OneTableViewCell.h */,
+				2B7B3E141EB30F43008CB7FA /* OneTableViewCell.m */,
+				2B7B3E151EB30F43008CB7FA /* OneTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2B7C91201EA9F01800F91418 /* ECG */ = {
 			isa = PBXGroup;
 			children = (
@@ -1067,6 +1125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7B3E171EB30F43008CB7FA /* OneTableViewCell.xib in Resources */,
 				2B7BFC5A1EA45AEE00D73C01 /* Pulse.storyboard in Resources */,
 				2B64A3FB1E9CABE0005E93BD /* Fat.storyboard in Resources */,
 				2BC32B891E8DFCBA00020BFE /* LaunchScreen.storyboard in Resources */,
@@ -1076,6 +1135,7 @@
 				2B6F53141EA5BC9300449A02 /* WSDatePickerView.xib in Resources */,
 				2B66DA801EA0B0B7005A41C3 /* FatScale.storyboard in Resources */,
 				2B9DF7101E964502004E79FF /* MBProgressHUD.bundle in Resources */,
+				2B7B3E0C1EB2EF7C008CB7FA /* One.storyboard in Resources */,
 				2B6FA4B41E9E30350035281D /* PublicView.xib in Resources */,
 				2B64A4051E9CC7AD005E93BD /* ListTableViewCell.xib in Resources */,
 				2BC32B861E8DFCBA00020BFE /* Assets.xcassets in Resources */,
@@ -1166,6 +1226,7 @@
 				2B66DA831EA0CF23005A41C3 /* WeighViewController.m in Sources */,
 				2B64A3D91E9C7F6D005E93BD /* ForgetViewController.m in Sources */,
 				2B016D261E94E2420019736C /* User.m in Sources */,
+				2B7B3E121EB2F010008CB7FA /* ListViewController.m in Sources */,
 				2B6F53111EA5BC9300449A02 /* NSDate+Extension.m in Sources */,
 				2B016D251E94E2420019736C /* CZUserDefalt.m in Sources */,
 				2B7B11A01E9F4C7200951E37 /* MeasureViewController.m in Sources */,
@@ -1173,6 +1234,7 @@
 				2B6EFBB41EA89BB90058FE28 /* BpmModel.m in Sources */,
 				2B6F53131EA5BC9300449A02 /* WSDatePickerView.m in Sources */,
 				2B016D091E94CE350019736C /* ValidateHelper.m in Sources */,
+				2B7B3E1A1EB334FF008CB7FA /* OneModel.m in Sources */,
 				2B6F53121EA5BC9300449A02 /* UIView+Extension.m in Sources */,
 				2B66DA7E1EA0AC27005A41C3 /* EarStatisticsViewController.m in Sources */,
 				2B64A3DB1E9C7F6D005E93BD /* RegistViewController.m in Sources */,
@@ -1198,8 +1260,10 @@
 				2B66DA861EA0CF49005A41C3 /* HistoryRecordViewController.m in Sources */,
 				2B7B11A31E9F4CAE00951E37 /* StatisticsViewController.m in Sources */,
 				2B6EFBAE1EA88B230058FE28 /* PulseMeterModel.m in Sources */,
+				2B7B3E0F1EB2EFA3008CB7FA /* OneViewController.m in Sources */,
 				2B6F53081EA5ADD800449A02 /* UserTableViewCell.m in Sources */,
 				2B7C913A1EAA06DE00F91418 /* PNLineChartView.m in Sources */,
+				2B7B3E161EB30F43008CB7FA /* OneTableViewCell.m in Sources */,
 				2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */,
 				2B016D1E1E94DD480019736C /* AOLinkedStoryboardSegue.m in Sources */,
 				2B016D081E94CE350019736C /* NSString+Hash.m in Sources */,

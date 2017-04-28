@@ -75,6 +75,7 @@
 
 #define Request_Method_PulseMeter                    @"health/app/queryOxygenApp"
 
+#define Request_Method_One                           @"health/app/queryIntegratedApp"    //一体机
 
 
 
