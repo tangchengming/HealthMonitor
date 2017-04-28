@@ -51,6 +51,7 @@
     
     [RequestManager httpPOST:Request_Method_One parameters:params success:^(id responseObject) {
         
+        NSLog(@"一体机数据：%@",responseObject);
         self.DatasArr = [OneModel mj_objectArrayWithKeyValuesArray:responseObject[@"listIntegrated"]];
         
     } failure:^(NSError *error) {
