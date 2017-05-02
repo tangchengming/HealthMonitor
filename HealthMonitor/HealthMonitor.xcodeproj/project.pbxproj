@@ -48,6 +48,8 @@
 		2B7078F11EB2173D00D1EA67 /* MenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7078EF1EB2173D00D1EA67 /* MenuCollectionViewCell.m */; };
 		2B7078F21EB2173D00D1EA67 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7078F01EB2173D00D1EA67 /* MenuCollectionViewCell.xib */; };
 		2B7078F51EB2196A00D1EA67 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7078F41EB2196A00D1EA67 /* HomeController.m */; };
+		2B78DC901EB85AAB003AB72F /* PuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B78DC8E1EB85AAB003AB72F /* PuTableViewCell.m */; };
+		2B78DC911EB85AAB003AB72F /* PuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B78DC8F1EB85AAB003AB72F /* PuTableViewCell.xib */; };
 		2B793A361EA738C300FFEECB /* BloodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B793A351EA738C300FFEECB /* BloodModel.m */; };
 		2B7B119D1E9F266800951E37 /* BPM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B119C1E9F266800951E37 /* BPM.storyboard */; };
 		2B7B11A01E9F4C7200951E37 /* MeasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */; };
@@ -184,6 +186,9 @@
 		2B7078F01EB2173D00D1EA67 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		2B7078F31EB2196A00D1EA67 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		2B7078F41EB2196A00D1EA67 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		2B78DC8D1EB85AAB003AB72F /* PuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuTableViewCell.h; sourceTree = "<group>"; };
+		2B78DC8E1EB85AAB003AB72F /* PuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuTableViewCell.m; sourceTree = "<group>"; };
+		2B78DC8F1EB85AAB003AB72F /* PuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuTableViewCell.xib; sourceTree = "<group>"; };
 		2B793A341EA738C300FFEECB /* BloodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloodModel.h; sourceTree = "<group>"; };
 		2B793A351EA738C300FFEECB /* BloodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloodModel.m; sourceTree = "<group>"; };
 		2B7B119C1E9F266800951E37 /* BPM.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BPM.storyboard; sourceTree = "<group>"; };
@@ -843,6 +848,9 @@
 				2B6FA4B01E9E300F0035281D /* PublicView.h */,
 				2B6FA4B11E9E300F0035281D /* PublicView.m */,
 				2B6FA4B31E9E30350035281D /* PublicView.xib */,
+				2B78DC8D1EB85AAB003AB72F /* PuTableViewCell.h */,
+				2B78DC8E1EB85AAB003AB72F /* PuTableViewCell.m */,
+				2B78DC8F1EB85AAB003AB72F /* PuTableViewCell.xib */,
 			);
 			path = PublicListView;
 			sourceTree = "<group>";
@@ -1133,6 +1141,7 @@
 				2B7C912F1EA9F01800F91418 /* ECG.storyboard in Resources */,
 				2B6F53171EA6141500449A02 /* User.storyboard in Resources */,
 				2B6F53141EA5BC9300449A02 /* WSDatePickerView.xib in Resources */,
+				2B78DC911EB85AAB003AB72F /* PuTableViewCell.xib in Resources */,
 				2B66DA801EA0B0B7005A41C3 /* FatScale.storyboard in Resources */,
 				2B9DF7101E964502004E79FF /* MBProgressHUD.bundle in Resources */,
 				2B7B3E0C1EB2EF7C008CB7FA /* One.storyboard in Resources */,
@@ -1266,6 +1275,7 @@
 				2B7B3E161EB30F43008CB7FA /* OneTableViewCell.m in Sources */,
 				2B9DF7061E961F25004E79FF /* LayerCoreRadius.m in Sources */,
 				2B016D1E1E94DD480019736C /* AOLinkedStoryboardSegue.m in Sources */,
+				2B78DC901EB85AAB003AB72F /* PuTableViewCell.m in Sources */,
 				2B016D081E94CE350019736C /* NSString+Hash.m in Sources */,
 				2B7C91341EA9F7B800F91418 /* Ecg_ViewController.m in Sources */,
 				2B7BFC601EA4941B00D73C01 /* FatMonitorViewController.m in Sources */,

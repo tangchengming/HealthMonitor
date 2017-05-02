@@ -31,30 +31,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setNetWorkData];
+    
+    [self tableview];
+    
+}
+
+- (void)tableview{
+
     self.ListTableView.delegate = self;
     self.ListTableView.dataSource = self;
     self.ListTableView.tableFooterView = [UIView new];
     //注册cell
     [self.ListTableView registerNib:[UINib nibWithNibName:@"OneTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
-    
-    [self setNetWorkData];
 }
-
-
 
 //数据列表网络请求
 - (void)setNetWorkData{
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"UID"] = @"32200236";//身份证
+    params[@"UID"] = @"510104196601151890";//身份证
     params[@"member_id"] = @"55";
     
     [RequestManager httpPOST:Request_Method_One parameters:params success:^(id responseObject) {
         
-        NSLog(@"一体机数据：%@",responseObject);
-        self.DatasArr = [OneModel mj_objectArrayWithKeyValuesArray:responseObject[@"listIntegrated"]];
+        
+        
+        if ([[responseObject objectForKey:@"flag"]integerValue]) {
+            
+            NSLog(@"一体机数据：%@",responseObject);
+            self.DatasArr = [OneModel mj_objectArrayWithKeyValuesArray:responseObject[@"listIntegrated"]];
+            
+        }else{
+            
+            
+            [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view afterDelty:1.0];
+            
+            
+        }
+
+        
+        
+        
         
     } failure:^(NSError *error) {
+        
         
     }];
     
@@ -84,6 +106,18 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    OneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    return cell;
+    
+    /*
+    if (self.DatasArr == 0) {
+        
+        OneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        
+        return cell;
+    }else{
     
     OneModel *oneModel = self.DatasArr[indexPath.item];
     
@@ -115,11 +149,11 @@
     cell.XTLabel.text = oneModel.bs_value;
     cell.TWLabel.text = [NSString stringWithFormat:@"%@°C",oneModel.temp_tempv];
     
-    
-    
-    
     return cell;
-    
+    }
+    return nil;
+     
+     */
 }
 
 
