@@ -15,7 +15,6 @@
 		2B016D251E94E2420019736C /* CZUserDefalt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D201E94E2420019736C /* CZUserDefalt.m */; };
 		2B016D261E94E2420019736C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D221E94E2420019736C /* User.m */; };
 		2B016D271E94E2420019736C /* XHContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B016D241E94E2420019736C /* XHContext.m */; };
-		2B64A3D81E9C7F6D005E93BD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64A3BC1E9C7F6D005E93BD /* HomeViewController.m */; };
 		2B64A3D91E9C7F6D005E93BD /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64A3C21E9C7F6D005E93BD /* ForgetViewController.m */; };
 		2B64A3DA1E9C7F6D005E93BD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64A3C41E9C7F6D005E93BD /* LoginViewController.m */; };
 		2B64A3DB1E9C7F6D005E93BD /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64A3C61E9C7F6D005E93BD /* RegistViewController.m */; };
@@ -32,6 +31,7 @@
 		2B66DA801EA0B0B7005A41C3 /* FatScale.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B66DA7F1EA0B0B7005A41C3 /* FatScale.storyboard */; };
 		2B66DA831EA0CF23005A41C3 /* WeighViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B66DA821EA0CF23005A41C3 /* WeighViewController.m */; };
 		2B66DA861EA0CF49005A41C3 /* HistoryRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B66DA851EA0CF49005A41C3 /* HistoryRecordViewController.m */; };
+		2B6A27591EB968E8007FA5D8 /* One.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6A275B1EB968E8007FA5D8 /* One.storyboard */; };
 		2B6EFBAB1EA88AAB0058FE28 /* FatMonitorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EFBAA1EA88AAB0058FE28 /* FatMonitorModel.m */; };
 		2B6EFBAE1EA88B230058FE28 /* PulseMeterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EFBAD1EA88B230058FE28 /* PulseMeterModel.m */; };
 		2B6EFBB11EA88B4D0058FE28 /* BgmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EFBB01EA88B4D0058FE28 /* BgmModel.m */; };
@@ -54,7 +54,6 @@
 		2B7B119D1E9F266800951E37 /* BPM.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B119C1E9F266800951E37 /* BPM.storyboard */; };
 		2B7B11A01E9F4C7200951E37 /* MeasureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */; };
 		2B7B11A31E9F4CAE00951E37 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B11A21E9F4CAE00951E37 /* StatisticsViewController.m */; };
-		2B7B3E0C1EB2EF7C008CB7FA /* One.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B3E0B1EB2EF7C008CB7FA /* One.storyboard */; };
 		2B7B3E0F1EB2EFA3008CB7FA /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B3E0E1EB2EFA3008CB7FA /* OneViewController.m */; };
 		2B7B3E121EB2F010008CB7FA /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B3E111EB2F010008CB7FA /* ListViewController.m */; };
 		2B7B3E161EB30F43008CB7FA /* OneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B3E141EB30F43008CB7FA /* OneTableViewCell.m */; };
@@ -130,8 +129,6 @@
 		2B016D221E94E2420019736C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2B016D231E94E2420019736C /* XHContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContext.h; sourceTree = "<group>"; };
 		2B016D241E94E2420019736C /* XHContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContext.m; sourceTree = "<group>"; };
-		2B64A3BB1E9C7F6D005E93BD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		2B64A3BC1E9C7F6D005E93BD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		2B64A3C11E9C7F6D005E93BD /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		2B64A3C21E9C7F6D005E93BD /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		2B64A3C31E9C7F6D005E93BD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -159,6 +156,7 @@
 		2B66DA821EA0CF23005A41C3 /* WeighViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeighViewController.m; sourceTree = "<group>"; };
 		2B66DA841EA0CF49005A41C3 /* HistoryRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryRecordViewController.h; sourceTree = "<group>"; };
 		2B66DA851EA0CF49005A41C3 /* HistoryRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryRecordViewController.m; sourceTree = "<group>"; };
+		2B6A275A1EB968E8007FA5D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/One.storyboard; sourceTree = "<group>"; };
 		2B6EFBA91EA88AAB0058FE28 /* FatMonitorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FatMonitorModel.h; sourceTree = "<group>"; };
 		2B6EFBAA1EA88AAB0058FE28 /* FatMonitorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FatMonitorModel.m; sourceTree = "<group>"; };
 		2B6EFBAC1EA88B230058FE28 /* PulseMeterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseMeterModel.h; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 		2B7B119F1E9F4C7200951E37 /* MeasureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureViewController.m; sourceTree = "<group>"; };
 		2B7B11A11E9F4CAE00951E37 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		2B7B11A21E9F4CAE00951E37 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
-		2B7B3E0B1EB2EF7C008CB7FA /* One.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = One.storyboard; sourceTree = "<group>"; };
 		2B7B3E0D1EB2EFA3008CB7FA /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		2B7B3E0E1EB2EFA3008CB7FA /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		2B7B3E101EB2F010008CB7FA /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
@@ -426,8 +423,6 @@
 		2B64A3BA1E9C7F6D005E93BD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2B64A3BB1E9C7F6D005E93BD /* HomeViewController.h */,
-				2B64A3BC1E9C7F6D005E93BD /* HomeViewController.m */,
 				2B7078F31EB2196A00D1EA67 /* HomeController.h */,
 				2B7078F41EB2196A00D1EA67 /* HomeController.m */,
 			);
@@ -861,7 +856,7 @@
 				2B7B3E081EB2EF47008CB7FA /* Controller */,
 				2B7B3E091EB2EF47008CB7FA /* Model */,
 				2B7B3E0A1EB2EF47008CB7FA /* View */,
-				2B7B3E0B1EB2EF7C008CB7FA /* One.storyboard */,
+				2B6A275B1EB968E8007FA5D8 /* One.storyboard */,
 			);
 			path = IntegratedMachine;
 			sourceTree = "<group>";
@@ -1144,7 +1139,7 @@
 				2B78DC911EB85AAB003AB72F /* PuTableViewCell.xib in Resources */,
 				2B66DA801EA0B0B7005A41C3 /* FatScale.storyboard in Resources */,
 				2B9DF7101E964502004E79FF /* MBProgressHUD.bundle in Resources */,
-				2B7B3E0C1EB2EF7C008CB7FA /* One.storyboard in Resources */,
+				2B6A27591EB968E8007FA5D8 /* One.storyboard in Resources */,
 				2B6FA4B41E9E30350035281D /* PublicView.xib in Resources */,
 				2B64A4051E9CC7AD005E93BD /* ListTableViewCell.xib in Resources */,
 				2BC32B861E8DFCBA00020BFE /* Assets.xcassets in Resources */,
@@ -1248,7 +1243,6 @@
 				2B66DA7E1EA0AC27005A41C3 /* EarStatisticsViewController.m in Sources */,
 				2B64A3DB1E9C7F6D005E93BD /* RegistViewController.m in Sources */,
 				2B793A361EA738C300FFEECB /* BloodModel.m in Sources */,
-				2B64A3D81E9C7F6D005E93BD /* HomeViewController.m in Sources */,
 				2B7C91311EA9F01800F91418 /* ECGTableViewCell.m in Sources */,
 				2B64A3F51E9CAAB6005E93BD /* AlkBGMViewController.m in Sources */,
 				2BC32B7E1E8DFCBA00020BFE /* AppDelegate.m in Sources */,
@@ -1315,6 +1309,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2B6A275B1EB968E8007FA5D8 /* One.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B6A275A1EB968E8007FA5D8 /* Base */,
+			);
+			name = One.storyboard;
+			sourceTree = "<group>";
+		};
 		2B6F53151EA6141500449A02 /* User.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

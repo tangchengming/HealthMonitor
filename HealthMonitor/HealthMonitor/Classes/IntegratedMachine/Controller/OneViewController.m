@@ -161,13 +161,18 @@
 
 
 
-
-
-- (IBAction)gengduoBtn:(UIButton *)sender {
+//sb 同个sb里面两个界面的跳转
+- (IBAction)gengduo:(UIButton *)sender {
     
-    ListViewController *list = [[ListViewController alloc]init];
-    [self presentViewController:list animated:NO completion:nil];
+    UIStoryboard *storboard = self.storyboard;
+    ListViewController *listVC = [storboard instantiateViewControllerWithIdentifier:@"list"];
+    
+    //editVC.userModel = UserInfoModel;
+    
+    [self presentViewController:listVC animated:YES completion:nil];
 }
+
+
 
 
 - (IBAction)fanhui:(UIButton *)sender {

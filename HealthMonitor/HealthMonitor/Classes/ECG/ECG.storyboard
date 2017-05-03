@@ -248,7 +248,7 @@
         <!--Details View Controller-->
         <scene sceneID="AW6-Ht-DNU">
             <objects>
-                <viewController id="mJJ-oe-CQ6" customClass="ECG_DetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detaVc" id="mJJ-oe-CQ6" customClass="ECG_DetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rZu-Oq-CA5"/>
                         <viewControllerLayoutGuide type="bottom" id="Aej-UT-4BO"/>

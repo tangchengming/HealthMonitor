@@ -141,7 +141,8 @@
         
         }else{
         
-            [MBProgressHUD showMessage:@"添加失败" toView:self.view afterDelty:1.0];
+            NSString *msg = responseObject[@"msg"];
+            [MBProgressHUD showMessage:msg toView:self.view afterDelty:1.0];
         }
         
         

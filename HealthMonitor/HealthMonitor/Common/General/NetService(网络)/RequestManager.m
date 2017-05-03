@@ -30,6 +30,7 @@
         
         failure(error);
         NSLog(@"网络请求失败!");
+        
     }];
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "HomeController.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UIView *phoneView;
 @property (weak, nonatomic) IBOutlet UIView *passwordView;
@@ -57,10 +57,16 @@
         [MBProgressHUD showMessage:@"手机号或密码输入错误" toView:self.view afterDelty:1.0];
         
         return;
-    }
+    }else{
     
-    //网络请求
-    [self setNetWorkData];
+        [MBProgressHUD showMessage:@"登录中..." toView:self.view afterDelty:5.0];
+        
+        //网络请求
+        [self setNetWorkData];
+        
+        
+
+    }
 }
 
 - (void) setNetWorkData {
@@ -80,11 +86,15 @@
         if ([[responseObject objectForKey:@"flag"]integerValue]) {
             
             [MBProgressHUD showMessage:@"登录成功" toView:self.view afterDelty:1.0];
-
+            
+            UIStoryboard *storboard = self.storyboard;
+            HomeController *home = [storboard instantiateViewControllerWithIdentifier:@"HomeVC"];
+            [self presentViewController:home animated:YES completion:nil];
+            
         }else{
             
            
-            [MBProgressHUD showMessage:@"手机号或密码输入错误" toView:self.view afterDelty:1.0];
+            [MBProgressHUD showMessage:responseObject[@"msg"] toView:self.view afterDelty:1.0];
 
             
         }

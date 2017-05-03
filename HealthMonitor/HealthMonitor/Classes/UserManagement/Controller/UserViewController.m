@@ -10,6 +10,7 @@
 #import "UserTableViewCell.h"
 #import "UserInfoModel.h"
 #import "ModifyViewController.h"
+#import "LoginViewController.h"
 @interface UserViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *UserListTableView;
 @property (strong, nonatomic)NSMutableArray *UserListDataArr;//模型对象数组（ 用户列表数据源）
@@ -60,7 +61,8 @@
             [self.UserListTableView reloadData];//刷新
         }else{
             
-            [MBProgressHUD showMessage:@"暂无成员 请创建！" toView:self.view afterDelty:1.0];
+            NSString *msg = responseObject[@"msg"];
+            [MBProgressHUD showMessage:msg toView:self.view afterDelty:1.0];
         }
         
         
@@ -197,6 +199,7 @@
 
 }
 
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;{
     
     
@@ -209,6 +212,15 @@
         
     }else{
         
+        
+        
+        
+        // 获取指定的Storyboard，name填写Storyboard的文件名
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        // 从Storyboard上按照identifier获取指定的界面（VC），identifier必须是唯一的
+        LoginViewController *login = [storyboard instantiateViewControllerWithIdentifier:@"LOGIN"];
+        [self presentViewController:login animated:YES completion:nil];
+
         
         [CZUserDefalt writeDataWithKey:@"loginStatus" andValue:@"NO"];
         [CZUserDefalt removeAllData];

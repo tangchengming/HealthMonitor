@@ -144,7 +144,6 @@
             self.lowLabel.text = @"000";
             
             
-            //_heartLabel.text = [_pulseArr objectAtIndex:_pulseArr.count-1];
             self.heartLabel.text = @"000";
             
         }else{
@@ -204,11 +203,12 @@
     PNPlot *plot2 = [[PNPlot alloc] init];
     
     plot2.plottingValues = self.systolicpressureArr;
-       plot2.lineColor = [UIColor redColor];
+    plot2.lineColor = [UIColor redColor];
     plot2.lineWidth = 1;
     
     [self.lineChartView  addPlot:plot2];
 }
+
 
 - (IBAction)UserBtn:(UIButton *)sender {
 }

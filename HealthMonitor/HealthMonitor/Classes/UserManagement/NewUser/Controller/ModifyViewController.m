@@ -19,9 +19,12 @@
 @property (weak, nonatomic) IBOutlet UIView *AgeView;
 @property (weak, nonatomic) IBOutlet UILabel *AgeLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *carView;
+@property (weak, nonatomic) IBOutlet UITextField *carTextField;
 
-@property (weak, nonatomic) IBOutlet UIView *cardView;
-@property (weak, nonatomic) IBOutlet UITextField *cardTextField;
+@property (weak, nonatomic) IBOutlet UIView *SfzView;
+@property (weak, nonatomic) IBOutlet UITextField *SfzTextField;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *SaveBtn;
 
@@ -110,18 +113,7 @@
     
 }
 
-- (IBAction)SaveButton:(UIButton *)sender {
-    
-    if ([self.cardTextField.text isEqualToString: @""]){
-        
-        [MBProgressHUD showMessage:@"卡号不能为空！" toView:self.view afterDelty:1.0];
-    }else{
-        
-        [self setNetWorkData];
-    }
-    
-    
-}
+
 
 
 - (void)setNetWorkData{
@@ -157,8 +149,8 @@
             
             
         }else{
-            
-            [MBProgressHUD showMessage:@"修改失败" toView:self.view afterDelty:1.0];
+            NSString *msg = responseObject[@"msg"];
+            [MBProgressHUD showMessage:msg toView:self.view afterDelty:1.0];
         }
         
         

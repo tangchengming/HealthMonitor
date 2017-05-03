@@ -143,7 +143,9 @@
     
     Ecg_structureModel *ECGModel = self.ECGListDataArr[indexPath.item];
     Ecg_structureModel *EcgModel = self.picturedataArr[indexPath.item];
-    ECG_DetailsViewController *ECG_Deta = [[ECG_DetailsViewController alloc]init];
+    
+    UIStoryboard *storboard = self.storyboard;
+    ECG_DetailsViewController *ECG_Deta = [storboard instantiateViewControllerWithIdentifier:@"detaVc"];
     
     ECG_Deta.collectdate = ECGModel.collectdate;
     ECG_Deta.waveform = ECGModel.waveform;
@@ -152,7 +154,9 @@
     ECG_Deta.heartrate = ECGModel.avr_heartrate;
     ECG_Deta.stisnormal = ECGModel.stisnormal;
     ECG_Deta.picturedata = EcgModel.picturedata;
+    
     [self presentViewController:ECG_Deta animated:YES completion:nil];
+    
     
 }
 

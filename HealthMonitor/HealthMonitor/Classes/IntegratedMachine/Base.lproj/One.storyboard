@@ -89,7 +89,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="查看更多"/>
                                         <connections>
-                                            <action selector="gengduoBtn:" destination="MBW-vg-5Bn" eventType="touchUpInside" id="GSo-uY-fh3"/>
+                                            <action selector="gengduo:" destination="MBW-vg-5Bn" eventType="touchUpInside" id="nbU-NM-9op"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -140,7 +140,7 @@
         <!--List View Controller-->
         <scene sceneID="2Vl-At-SNz">
             <objects>
-                <viewController id="Jk8-Eh-2jn" customClass="ListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="list" id="Jk8-Eh-2jn" customClass="ListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aXl-2M-vim"/>
                         <viewControllerLayoutGuide type="bottom" id="m2t-ps-pXp"/>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4r-8R-QmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784.79999999999995" y="98.50074962518741"/>
+            <point key="canvasLocation" x="774" y="99"/>
         </scene>
     </scenes>
     <resources>

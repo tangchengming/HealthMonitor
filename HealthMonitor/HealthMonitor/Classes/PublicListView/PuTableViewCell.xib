@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="144" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKB-CU-K9F">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户管理" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKB-CU-K9F">
                         <rect key="frame" x="0.0" y="87" width="144" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="ICN-tW-aoC"/>
@@ -28,7 +28,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="please_log_in_normal" translatesAutoresizingMaskIntoConstraints="NO" id="nye-GG-mvK">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_9" translatesAutoresizingMaskIntoConstraints="NO" id="nye-GG-mvK">
                         <rect key="frame" x="36" y="10" width="72" height="67"/>
                     </imageView>
                 </subviews>
@@ -50,6 +50,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="please_log_in_normal" width="136" height="136"/>
+        <image name="user_9" width="279" height="279"/>
     </resources>
 </document>
