@@ -43,7 +43,7 @@
 #define Request_Method_deleteUser                    @"live/memberlist/deleteMemberlistByMemberId"//删除用户  POST
 #define Request_Method_card                          @"health/bindUser/bindUserApp"//绑定卡号  POST
 #define Request_Method_EditUser                      @"live/memberlist/updateMemberlist"//修改用户  POST
-
+#define Request_Method_XGMM                          @"live/modify" //忘记密码 重新设置新密码
 
 #define Request_Method_Blood_pressure                @"health/app/queryBlood_pressureApp"    //血压数据
 
@@ -79,22 +79,8 @@
 
 
 
-#define Request_Method_CancelLogin                    @"apipassport-logout.html"  //注销登录
-#define Request_Method_BandLogosHtml                  @"apicommon-bandlogos.html"//首页品牌列表
-#define Request_Method_indexRecommon                  @"apicommon-recommends.html"//首页推荐
-#define Request_Method_brandGoods                     @"apibrand-brandGoods.html"//品牌商品列表
-#define Request_Method_goodDetail                     @"apiproduct-%@.html"//商品详情
-#define Request_Method_addShopping                    @"apicart-add-goods.html"//加入购物车
-#define Request_Method_apicarthtml                    @"apicart.html"//购物车列表
-#define Request_Method_update_goods                   @"apicart-update-goods.html"//修改购物车数量
-#define Request_Method_removegoods                    @"apicart-remove-goods.html"//删除购物车
-#define Request_Method_checkout                       @"apicart-checkout.html"//购物车结算
-#define Request_Method_shippinglist                   @"apicart-shippinglist.html"//地址列表
-#define Request_Method_shippingsave                   @"apicart-shippingsave.html"//保存地址
-#define Request_Method_shippingdeleteHtml             @"apicart-shippingdelete.html"//删除地址
-#define Request_Method_createHtml                     @"apiorder-create.html"//提交订单
-#define Request_Method_orders                         @"apimember-orders.html"//订单列表
-#define Request_Method_Cancelorders                   @"apipassport-cancelorder-%@.html"//取消订单
+//#define Request_Method_CancelLogin                    @"apipassport-logout.html"  //注销登录
+
 
 
 

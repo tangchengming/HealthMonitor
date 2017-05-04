@@ -121,14 +121,14 @@
 
 - (IBAction)codeBtn:(UIButton *)sender {
     
-    if (![ ValidateHelper validateMobile1:self.phoneTextFiled.text]) {
+    if (![ ValidateHelper validateMobile1:self.phoneTextFiled.text] || [self.phoneTextFiled.text isEqualToString: @""]) {
         
         [MBProgressHUD showMessage:@"手机号输入错误" toView:self.view afterDelty:1.0];
         return;
-    }
+    }else{
     
     [self checkTel];
-    
+    }
     
 }
 

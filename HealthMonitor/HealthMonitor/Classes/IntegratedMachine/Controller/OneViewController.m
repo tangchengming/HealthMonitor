@@ -63,6 +63,7 @@
             NSLog(@"一体机数据：%@",responseObject);
             self.DatasArr = [OneModel mj_objectArrayWithKeyValuesArray:responseObject[@"listIntegrated"]];
             
+            [self.ListTableView reloadData];//刷新
         }else{
             
             
@@ -111,7 +112,7 @@
     
     return cell;
     
-    /*
+    
     if (self.DatasArr == 0) {
         
         OneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
@@ -123,37 +124,37 @@
     
     OneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.timeLabel.text = oneModel.measureTime;
-    cell.SGLabel.text = [NSString stringWithFormat:@"%@cm",oneModel.BMI_height];
-    cell.TZLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BMI_weight];
-    cell.BMILabel.text = oneModel.BMI_BMI;
-    cell.SSYLabel.text = [NSString stringWithFormat:@"%@mmHg",oneModel.BP_sbp];
-    cell.SZYLabel.text = [NSString stringWithFormat:@"%@mmHg",oneModel.BP_dbp];
-    cell.MBLabel.text = oneModel.BP_hr;
-    cell.TZFLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_fm];
-    cell.TZFLLabel.text = [NSString stringWithFormat:@"%@%%",oneModel.BF_fp];
-    cell.CZFLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_lbm];
-    cell.TSFLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_tbw];
-    cell.TSFLLabel.text = [NSString stringWithFormat:@"%@%%",oneModel.BF_tbwc];
-    cell.TGGLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_sm];
-    cell.TJRLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_mm];
-    cell.XBWYLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_ecf];
-    cell.XBNYLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_icf];
-    cell.DBZLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_protein];
-    cell.KWZLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_minerals];
-    cell.QTCFLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_other];
-    cell.JCDXLabel.text = [NSString stringWithFormat:@"%@kcl",oneModel.BF_bmr];
-    cell.ZFTJLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_fmAdjus];
-    cell.JRTJLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.BF_mmAdjus];
-    cell.YBHDLabel.text = [NSString stringWithFormat:@"%@%%",oneModel.bo_os];
-    cell.XTLabel.text = oneModel.bs_value;
-    cell.TWLabel.text = [NSString stringWithFormat:@"%@°C",oneModel.temp_tempv];
+        cell.timeLabel.text = oneModel.measureTime;
+        cell.SGLabel.text = [NSString stringWithFormat:@"%@cm",oneModel.bmi_height];
+        cell.TZLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bmi_weight];
+        cell.BMILabel.text = oneModel.bmi_BMI;
+        cell.SSYLabel.text = [NSString stringWithFormat:@"%@mmHg",oneModel.bp_sbp];
+        cell.SZYLabel.text = [NSString stringWithFormat:@"%@mmHg",oneModel.bp_dbp];
+        cell.MBLabel.text = oneModel.bp_hr;
+        cell.TZFLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_fm];
+        cell.TZFLLabel.text = [NSString stringWithFormat:@"%@%%",oneModel.bf_fp];
+        cell.CZFLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_lbm];
+        cell.TSFLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_tbw];
+        cell.TSFLLabel.text = [NSString stringWithFormat:@"%@%%",oneModel.bf_tbwc];
+        cell.TGGLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_sm];
+        cell.TJRLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_mm];
+        cell.XBWYLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_ecf];
+        cell.XBNYLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_icf];
+        cell.DBZLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_protein];
+        cell.KWZLLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_minerals];
+        cell.QTCFLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_other];
+        cell.JCDXLabel.text = [NSString stringWithFormat:@"%@kcl",oneModel.bf_bmr];
+        cell.ZFTJLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_fmAdjus];
+        cell.JRTJLabel.text = [NSString stringWithFormat:@"%@kg",oneModel.bf_mmAdjus];
+        cell.YBHDLabel.text = [NSString stringWithFormat:@"%@%%",oneModel.bo_os];
+        cell.XTLabel.text = oneModel.bs_value;
+        cell.TWLabel.text = [NSString stringWithFormat:@"%@°C",oneModel.temp_tempv];
     
     return cell;
     }
     return nil;
      
-     */
+    
 }
 
 

@@ -209,8 +209,9 @@
     [self.lineChartView  addPlot:plot2];
 }
 
-
+//点击按钮 弹出选择设备项目
 - (IBAction)UserBtn:(UIButton *)sender {
+    
 }
 
 
